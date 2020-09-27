@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+    box-sizing: border-box;
+}
+
+html {
+    /* 設定根元素font-size:10px */
+    font-size: 10px;
+}
+
+body {
+    /* body字級大小 1.4*10=14px */
+    font-size: 1.4rem;
+}
