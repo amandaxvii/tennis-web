@@ -4,6 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style-all.css">
     <link rel="stylesheet" href="assets/css/style-00.css">
     <title>Tennis</title>
@@ -16,12 +19,39 @@
             <p>你想了解的網球資訊</p>
             <small>Everything You Need to Know About Tennis</small>
         </div>
-        <nav>
-            <ul>
-                <li><a href="">首頁 / Home</a></li>
-                <li><a href="">組織 / Organization</a></li>
-                <li><a href="">賽事 / Tournaments</a></li>
-                <li><a href="">規則 / Manner of Play</a></li>
+        <nav class="nav-bar">
+            <ul class="nav-menu">
+                <li>
+                    <i class="fas fa-home"></i>
+                    <a href="">首頁 / Home</a></li>
+                <li>
+                    <i class="fas fa-building"></i>
+                    <a href="">組織 / Organization</a>
+                    <ul class="drop-down">
+                        <li><a href=""></a>ITF</li>
+                        <li><a href=""></a>ATP</li>
+                        <li><a href=""></a>WTA</li>
+                    </ul>
+                </li>
+                <li>
+                    <i class="fas fa-trophy"></i>
+                    <a href="">賽事 / Tournaments</a>
+                    <ul class="drop-down">
+                        <li><a href=""></a>Grand Slam</li>
+                        <li><a href=""></a>ATP tour</li>
+                        <li><a href=""></a>WTA tour</li>
+                    </ul>
+                </li>
+                <li>
+                    <i class="fas fa-scroll"></i>
+                    <a href="">規則 / Manner of Play</a>
+                    <ul class="drop-down">
+                        <li><a href=""></a>球場</li>
+                        <li><a href=""></a>得分</li>
+                        <li><a href=""></a>計分</li>
+                        <li><a href=""></a>人員</li>
+                    </ul>
+                </li>
             </ul>
         </nav>
         <footer>
