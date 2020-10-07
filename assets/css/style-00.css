@@ -34,10 +34,14 @@ main {
 }
 
 .nav-bar i {
-    margin-right: 1rem;
+    margin-right: 0.5rem;
 }
 
 .nav-bar a {
+    color: #666;
+}
+
+.nav-bar a+i {
     color: #666;
 }
 
