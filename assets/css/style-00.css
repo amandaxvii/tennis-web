@@ -1,0 +1,139 @@
+/* 共用設定 */
+
+#menu-control {
+    position: absolute;
+    z-index: -2;
+    opacity: 0;
+}
+
+.header {
+    width: 100%;
+    position: fixed;
+    top: 10px;
+}
+
+.header-content {
+    width: 90%;
+    height: 50px;
+    margin: 0 auto;
+    background: #fefcfd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    border: 1px solid #888;
+}
+
+.header-content i {
+    color: #000;
+}
+
+.header-content .home-icon {
+    display: block;
+    background: #ac933f;
+    line-height: 50px;
+    padding: 0 1.5rem;
+    position: relative;
+}
+
+.header-content .home-icon::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 0;
+    left: 100%;
+    border-top: 50px solid #ac933f;
+    border-right: 12px solid transparent;
+}
+
+.nav-menu>li:hover .nav-submenu {
+    display: block;
+}
+
+.nav-menu a {
+    color: #000;
+}
+
+.nav-submenu {
+    display: none;
+}
+
+.wrapper {
+    width: 80%;
+    margin: 65vh auto 50px;
+    text-align: center;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    margin: 150px auto auto;
+}
+
+
+
+/* 手機螢幕 */
+@media screen and (max-width: 767px) {
+
+    .header-content .header-rwd-icon {
+        display: block;
+        background: #ac933f;
+        line-height: 50px;
+        padding: 0 1.5rem;
+        position: relative;
+    }
+
+    .header-content .header-rwd-icon::after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 0;
+        height: 0;
+        top: 0;
+        right: 100%;
+        border-right: 12px solid #ac933f;
+        border-top: 50px solid transparent;
+    }
+
+    nav {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        padding: 1rem;
+        position: absolute;
+        left: 0;
+        text-align: center;
+        border: 1px solid #888;
+        top: 100%;
+
+        opacity: 0;
+        transition: opacity 0.5s;
+    }
+
+    /* 波浪號後面只能接input同層，所以要先選到.header */
+    #menu-control:checked~.header nav {
+        opacity: 1;
+    }
+
+    .nav-menu li+li {
+        border-top: 1px solid #888;
+    }
+
+    .nav-menu>a,
+    .nav-submenu>li:last-child {
+        margin-bottom: 1rem;
+    }
+
+    .nav-menu a {
+        display: inline-block;
+        padding: 1rem 0;
+    }
+}
+
+/* 平板螢幕 */
+@media screen and (max-width: 991px) {}
+
+/* 電腦螢幕 */
+@media screen and (min-width: 992px) {}
