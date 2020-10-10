@@ -6,6 +6,7 @@
     opacity: 0;
 }
 
+/* header fixed */
 .header {
     width: 100%;
     position: fixed;
@@ -22,18 +23,21 @@
     align-items: center;
     position: relative;
     border: 1px solid #888;
+    border-radius: 0.5rem;
 }
 
 .header-content i {
     color: #000;
 }
 
+/* Home-icon */
 .header-content .home-icon {
     display: block;
     background: #ac933f;
     line-height: 50px;
     padding: 0 1.5rem;
     position: relative;
+    border-radius: 0.5rem 0 0 0.5rem;
 }
 
 .header-content .home-icon::after {
@@ -48,21 +52,29 @@
     border-right: 12px solid transparent;
 }
 
-.nav-menu>li:hover .nav-submenu {
-    display: block;
+nav i {
+    padding-left: 0.5rem;
 }
 
 .nav-menu a {
-    color: #000;
+    color: #444;
+    display: inline-block;
 }
 
 .nav-submenu {
     display: none;
 }
 
+.nav-menu>li:hover .nav-submenu {
+    display: block;
+}
+
+.nav-menu li:hover a {
+    color: #261a28;
+}
+
 .wrapper {
     width: 80%;
-    margin: 65vh auto 50px;
     text-align: center;
 }
 
@@ -73,16 +85,17 @@ footer {
 }
 
 
-
 /* 手機螢幕 */
 @media screen and (max-width: 767px) {
 
+    /* RWD icon */
     .header-content .header-rwd-icon {
         display: block;
         background: #ac933f;
         line-height: 50px;
         padding: 0 1.5rem;
         position: relative;
+        border-radius: 0 0.5rem 0.5rem 0;
     }
 
     .header-content .header-rwd-icon::after {
@@ -97,6 +110,7 @@ footer {
         border-top: 50px solid transparent;
     }
 
+    /* 漢堡選單menu區塊 */
     nav {
         width: 100%;
         height: auto;
@@ -107,6 +121,7 @@ footer {
         text-align: center;
         border: 1px solid #888;
         top: 100%;
+        border-radius: 0.5rem;
 
         opacity: 0;
         transition: opacity 0.5s;
@@ -121,19 +136,98 @@ footer {
         border-top: 1px solid #888;
     }
 
-    .nav-menu>a,
-    .nav-submenu>li:last-child {
-        margin-bottom: 1rem;
-    }
 
     .nav-menu a {
         display: inline-block;
         padding: 1rem 0;
+        transition: all 0.3;
+    }
+
+    .nav-menu>li:hover>a {
+        transform: scale(1.1);
+        color: lightcoral;
+    }
+
+    .nav-submenu>li>a {
+        width: 100%;
+    }
+
+    .nav-submenu>li:hover>a {
+        background: rgba(171, 146, 63, 0.3);
+    }
+
+    .wrapper {
+        margin: 65vh auto 5vh;
+    }
+}
+
+/* 平板 & 電腦共用設定 */
+@media screen and (min-width: 768px) {
+    .header label {
+        display: none;
+    }
+
+    .header-content .nav-menu {
+        display: flex;
+    }
+
+    .header-content .nav-menu>li {
+        padding: 1.5rem 4rem 1.5rem 3rem;
+        position: relative;
+    }
+
+    /* nav 第一層動畫 */
+    .nav-menu>li>a:before {
+        content: '';
+        position: absolute;
+        width: 0.2rem;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background: #ac933f;
+        opacity: 0.5;
+        transition: all 0.3s;
+    }
+
+    .nav-menu>li:last-child>a::before {
+        border-radius: 0 0.5rem 0.5rem 0;
+    }
+
+    .nav-menu>li:hover>a:before {
+        width: 100%;
+    }
+
+    .nav-menu>li .nav-submenu {
+        position: absolute;
+        left: 0;
+        top: 100%;
+        width: 100%;
+
+    }
+
+    .nav-submenu>li a {
+        width: 100%;
+        padding: 0.5rem 1.5rem;
+    }
+
+    .nav-submenu>li:hover>a {
+        background: rgba(171, 146, 63, 0.3);
     }
 }
 
 /* 平板螢幕 */
-@media screen and (max-width: 991px) {}
+@media screen and (max-width: 991px) {
+    .wrapper {
+        margin: 50vh auto 25vh;
+    }
+}
 
 /* 電腦螢幕 */
-@media screen and (min-width: 992px) {}
+@media screen and (min-width: 992px) {
+
+
+    .wrapper {
+        margin: 50vh auto 25vh;
+    }
+
+}
