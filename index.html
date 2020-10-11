@@ -11,6 +11,7 @@
     <!-- common styles for all pages -->
     <link rel="stylesheet" href="assets/css/style-all.css">
     <link rel="stylesheet" href="assets/css/style-00.css">
+    <link rel="stylesheet" href="assets/css/style-navigation.css">
     <title>Tennis</title>
 </head>
 
@@ -27,16 +28,19 @@
 
             <!-- 漢堡選單 -->
             <label for="menu-control">
-                <i class="fas fa-bars header-rwd-icon"></i>
+                <div class="header-rwd-icon">
+                    <i class="fas fa-bars "></i>
+                    <i class="fas fa-times"></i>
+                </div>
             </label>
 
             <nav>
                 <ul class="nav-menu">
                     <li>
-                        <a href="">組織介紹</a>
+                        <a href="pages/section_1.html">組織介紹</a>
                         <i class="fas fa-angle-down"></i>
                         <ul class="nav-submenu">
-                            <li><a href="">ITF</a></li>
+                            <li><a href="/pages/section_1-1.html">ITF</a></li>
                             <li><a href="">ATP</a></li>
                             <li><a href="">WTA</a></li>
                         </ul>
@@ -64,8 +68,6 @@
             </nav>
         </div>
     </header>
-
-    <div class="test"></div>
 
     <!-- content -->
     <div class="wrapper">
