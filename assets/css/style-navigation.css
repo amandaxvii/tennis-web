@@ -75,18 +75,18 @@ nav i {
 
 /* breadcrumbs */
 .breadcrumbs {
-    width: 30%;
+    width: 40%;
     position: fixed;
     top: 6rem;
 }
 
 .breadcrumbs-list {
     display: flex;
-    margin-left: 0.5rem;
+    margin: 0 auto 0 0.5rem;
 }
 
 .breadcrumbs-list>li {
-    padding: 1rem 0.5rem 0;
+    padding: 1rem 0.5rem;
 }
 
 .breadcrumbs-list>li+li::before {
@@ -157,13 +157,15 @@ footer {
         border-radius: 0.5rem;
         background: #fefcfd;
 
+        display: none;
         opacity: 0;
-        transition: opacity 0.5s;
+        transition: all 0.5s;
     }
 
     /* 波浪號後面只能接input同層，所以要先選到.header */
     #menu-control:checked~.header nav {
         opacity: 1;
+        display: block;
     }
 
     #menu-control:checked~.header .header-rwd-icon :first-child {
@@ -176,6 +178,10 @@ footer {
 
     #menu-control:checked~.header+.breadcrumbs {
         display: none;
+    }
+
+    #menu-control:checked~.header~.side-bar {
+        z-index: -2;
     }
 
     .nav-menu li+li {
@@ -194,6 +200,10 @@ footer {
         color: lightcoral;
     }
 
+    .nav-submenu {
+        background: #fefcfd;
+    }
+
     .nav-submenu>li>a {
         width: 100%;
     }
@@ -204,6 +214,7 @@ footer {
 
     .breadcrumbs {
         left: 3rem;
+        width: 100%;
     }
 
     .wrapper {
@@ -225,6 +236,8 @@ footer {
         padding: 1.5rem 4rem 1.5rem 3rem;
         position: relative;
     }
+
+
 
     /* nav 第一層動畫 */
     .nav-menu>li>a:before {
@@ -252,6 +265,10 @@ footer {
         left: 0;
         top: 100%;
         width: 100%;
+    }
+
+    .nav-submenu {
+        background: rgb(255, 235, 167);
     }
 
     .nav-submenu>li a {
