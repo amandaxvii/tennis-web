@@ -1,0 +1,317 @@
+.court-layout {
+    width: 100%;
+}
+
+.court-group {
+    margin: 10rem auto;
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}
+
+
+.outside-space {
+    width: 80%;
+    height: 30vh;
+    background: #2978ff;
+    border: 1px solid #888;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.court {
+    width: 80%;
+    height: 75%;
+    display: flex;
+}
+
+.baseline {
+    height: 100%;
+    width: 2px;
+    background: #000;
+    position: relative;
+    cursor: pointer;
+}
+
+.baseline-top:before {
+    content: 'baseline';
+    position: absolute;
+    left: 40%;
+    top: -25px;
+    opacity: 0;
+}
+
+.baseline-btm:before {
+    content: 'baseline';
+    position: absolute;
+    left: 40%;
+    top: 6px;
+    opacity: 0;
+}
+
+/* hover 效果 */
+.baseline:hover:before,
+.sideline-singles:hover:before,
+.service-line:hover::before,
+.center-mark-top:hover:before,
+.center-mark-btm:hover:before,
+.center-service-line:hover:before,
+.net:hover:before {
+    opacity: 1;
+}
+
+.baseline:hover,
+.sideline-doubles:hover,
+.sideline-singles:hover,
+.service-line:hover,
+.center-mark-top:hover,
+.center-mark-btm:hover,
+.center-service-line:hover,
+.net:hover {
+    background: #f0f;
+}
+
+.baseline:hover,
+.service-line:hover,
+.net:hover {
+    height: 3px;
+}
+
+.sideline-doubles:hover,
+.sideline-singles:hover,
+.center-mark-top:hover,
+.center-mark-btm:hover,
+.center-service-line:hover {
+    width: 3px;
+}
+
+.half-court {
+    display: flex;
+    flex-direction: column;
+    width: calc(50% - 1px);
+}
+
+.side-court {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    flex-direction: column;
+}
+
+.sideline-doubles {
+    width: 100%;
+    background: #000;
+    height: 2px;
+    position: relative;
+}
+
+.sideline-doubles:before {
+    content: 'sideline(doubles)';
+    position: absolute;
+    top: 70%;
+    left: 6px;
+    opacity: 0;
+}
+
+.sideline-doubles:hover:before {
+    opacity: 1;
+}
+
+.sideline-block {
+    background: #888;
+    height: calc(100% - 4px);
+    width: 100%;
+}
+
+.sideline-singles {
+    width: 100%;
+    background: #000;
+    height: 2px;
+    position: relative;
+}
+
+.sideline-singles:before {
+    content: 'sideline(singles)';
+    position: absolute;
+    left: 6px;
+    top: 20%;
+    opacity: 0;
+}
+
+
+.middle-court {
+    width: 100%;
+    height: 70%;
+    display: flex;
+}
+
+.baseline-block {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.baseline-block-left {
+    width: 100%;
+    height: 50%;
+    background: rgb(104, 169, 0);
+}
+
+.baseline-block-right {
+    width: 100%;
+    height: 50%;
+    background: rgb(104, 169, 0);
+}
+
+.center-mark-top {
+    width: 7px;
+    height: 2px;
+    background: #000;
+    position: absolute;
+    left: 0;
+    top: calc(50% - 1px);
+    cursor: pointer;
+}
+
+.backcourt {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.center-mark-btm {
+    width: 7px;
+    height: 2px;
+    background: #000;
+    position: absolute;
+    left: calc(100% - 7px);
+    top: calc(50% - 1px);
+    cursor: pointer;
+}
+
+.service-line {
+    width: 2px;
+    background: #000;
+    height: 100%;
+    position: relative;
+}
+
+.service-line-top::before {
+    content: 'service line';
+    position: absolute;
+    top: -25px;
+    left: 30%;
+    opacity: 0;
+}
+
+.service-line-btm::before {
+    content: 'service line';
+    position: absolute;
+    top: 5px;
+    left: 30%;
+    opacity: 0;
+}
+
+.service-group {
+    display: flex;
+    flex-direction: column;
+    width: calc(50% - 1px);
+    height: 100%;
+}
+
+.service-box {
+    width: 100%;
+    height: calc(50% - 1px);
+    background: rgb(104, 169, 0);
+}
+
+.center-service-line {
+    width: 100%;
+    height: 2px;
+    background: #000;
+    position: relative;
+}
+
+.center-service-line:before {
+    content: 'center service line';
+    position: absolute;
+    top: 5px;
+    left: 6px;
+    opacity: 0;
+}
+
+.net {
+    width: 2px;
+    height: 110%;
+    background: #000;
+    position: relative;
+    top: -5%;
+}
+
+.net:before {
+    content: 'net';
+    position: absolute;
+    top: 0;
+    left: -15px;
+    opacity: 0;
+}
+
+.court-glossary {
+    width: 100%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.court-glossary table td+td {
+    padding-left: 5px;
+}
+
+.court-btn {
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    margin-right: 30px;
+}
+
+.court-btn button {
+    margin: 5px 0 10px;
+}
+
+.active {
+    background: #d18237;
+    border: 2px solid #d18237;
+    /* transition: all 0.3s; */
+}
+
+
+@media screen and (max-width: 767px) {
+    .court-group {
+        margin: 10rem auto;
+    }
+
+
+
+}
+
+@media screen and (min-width: 768px) {
+    .court-group {
+        margin: 13rem auto;
+    }
+
+    .outside-space {
+        width: 50%;
+
+    }
+
+
+}

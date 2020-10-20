@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+
+    <!-- common styles for all pages -->
+    <link rel="stylesheet" href="../assets/css/style-all.css">
+    <!-- navigation styles -->
+    <link rel="stylesheet" href="../assets/css/style-navigation.css">
+
+    <link rel="stylesheet" href="../assets/css/style-section_3-1.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- 控制 label checkbox -->
+    <input type="checkbox" name="" id="menu-control">
+
+    <!-- navigation fixed -->
+    <header class="header">
+        <div class="header-content">
+            <a href="../index.html" class="home-icon">
+                <i class="fas fa-home "></i>
+            </a>
+
+            <!-- 漢堡選單 -->
+            <label for="menu-control">
+                <div class="header-rwd-icon">
+                    <i class="fas fa-bars"></i>
+                    <i class="fas fa-times"></i>
+                </div>
+            </label>
+
+            <nav>
+                <ul class="nav-menu">
+                    <li>
+                        <a href="section_1.html">組織介紹</a>
+                        <i class="fas fa-angle-down"></i>
+                        <ul class="nav-submenu">
+                            <li><a href="section_1-1.html">ITF</a></li>
+                            <li><a href="">ATP</a></li>
+                            <li><a href="">WTA</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">重點賽事</a>
+                        <i class="fas fa-angle-down"></i>
+                        <ul class="nav-submenu">
+                            <li><a href="section_2-1.html">大滿貫</a></li>
+                            <li><a href="section_2-2.html">ATP 巡迴賽</a></li>
+                            <li><a href="">WTA 巡迴賽</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">比賽規則</a>
+                        <i class="fas fa-angle-down"></i>
+                        <ul class="nav-submenu">
+                            <li><a href="">球場</a></li>
+                            <li><a href="">得分</a></li>
+                            <li><a href="">計分</a></li>
+                            <li><a href="">人員</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- breadcrumbs list fixed -->
+    <div class="breadcrumbs">
+        <ul class="breadcrumbs-list">
+            <li><a href="#">球場</a></li>
+            <li><a href="#">得分</a></li>
+            <li><a href="">比分</a></li>
+            <li><a href="">人員</a></li>
+        </ul>
+    </div>
+
+
+    <!-- court layout -->
+    <div class="court-layout">
+        <div class="court-group">
+
+            <div class="outside-space">
+                <div class="court">
+                    <!-- baseline -->
+                    <div class="baseline baseline-top">
+                    </div>
+
+                    <!-- left court -->
+                    <div class="half-court">
+                        <!-- top side court -->
+                        <div class="side-court">
+                            <div class="sideline-doubles"></div>
+                            <div class="sideline-block alley"></div>
+                            <div class="sideline-singles"></div>
+                        </div>
+                        <!-- baseline & service box -->
+                        <div class="middle-court">
+                            <div class="baseline-block">
+                                <div class="baseline-block-left ad-court"></div>
+                                <div class="backcourt"></div>
+                                <div class="center-mark-top"></div>
+                                <div class="baseline-block-right deuce-court"></div>
+                            </div>
+                            <div class="service-line service-line-top"></div>
+
+                            <div class="service-group">
+                                <div class="service-box"></div>
+                                <div class="center-service-line"></div>
+                                <div class="service-box"></div>
+                            </div>
+                        </div>
+                        <!-- bottom side court -->
+                        <div class="side-court">
+                            <div class="sideline-singles"></div>
+                            <div class="sideline-block alley"></div>
+                            <div class="sideline-doubles"></div>
+                        </div>
+                    </div>
+
+                    <!-- net -->
+                    <div class="net"></div>
+
+                    <!-- right court -->
+                    <div class="half-court">
+                        <!-- top side court -->
+                        <div class="side-court">
+                            <div class="sideline-doubles"></div>
+                            <div class="sideline-block alley"></div>
+                            <div class="sideline-singles"></div>
+                        </div>
+                        <!-- baseline & service box -->
+                        <div class="middle-court">
+                            <div class="service-group">
+                                <div class="service-box"></div>
+                                <div class="center-service-line"></div>
+                                <div class="service-box"></div>
+                            </div>
+                            <div class="service-line service-line-btm"></div>
+                            <div class="baseline-block">
+                                <div class="baseline-block-right deuce-court "></div>
+                                <div class="backcourt"></div>
+                                <div class="center-mark-btm"></div>
+                                <div class="baseline-block-left ad-court"></div>
+                            </div>
+                        </div>
+                        <!-- bottom side court -->
+                        <div class="side-court">
+                            <div class="sideline-singles"></div>
+                            <div class="sideline-block alley"></div>
+                            <div class="sideline-doubles"></div>
+                        </div>
+                    </div>
+
+                    <!-- baseline -->
+                    <div class="baseline baseline-btm"></div>
+                </div>
+            </div>
+
+
+            <div class="court-glossary">
+                <h2>網球場地術語</h2>
+
+                <div class="court-glossary-select">
+                    <label for="court-area">網球場區域</label>
+                    <select name="court-area" id="court-area" class="glossary-select">
+                        <!-- <option value="" disabled selected>Select one option</option> -->
+                        <option value="deuce-court">Deuce court</option>
+                        <option value="ad-court">Ad court</option>
+                        <option value="alley">Alley</option>
+                        <option value="backcourt">Backcourt</option>
+                    </select>
+                    <button type="submit" class="glossary-btn">確認</button>
+                </div>
+
+                <div class="court-glossary-select">
+                    <label for="court-line">網球場地線</label>
+                    <select name="court-line" id="court-line" class="glossary-select">
+                        <!-- <option value="" disabled selected>Select one option</option> -->
+                        <option value="baseline">Baseline</option>
+                        <option value="Ad-court">Ad court</option>
+                        <option value="Alley">Alley</option>
+                        <option value="Backcourt">Backcourt</option>
+                        <option value=""></option>
+                    </select>
+                    <button type="submit" class="glossary-btn-two">確認</button>
+                </div>
+
+                <!-- <table>
+                    <tr>
+                        <td>Deuce court</td>
+                        <td>每邊球員右半邊的球場。</td>
+                    </tr>
+                    <tr>
+                        <td>Ad court</td>
+                        <td>每邊球員的左側場區，因為佔先（Advantage）分總是在左側場區進行發球。</td>
+                    </tr>
+                    <tr>
+                        <td>Alley</td>
+                        <td>網球場上，介於單打邊線（sideline/tramline）和雙打邊線之間的長條狀區域。</td>
+                    </tr>
+                    <tr>
+                        <td>Backcourt</td>
+                        <td>後場，球場中發球線（service line）與底線（baseline）之間的區域。</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table> -->
+
+
+            </div>
+            <!-- 
+            <div class="court-btn">
+                <button>單打區域</button>
+                <button>雙打區域</button>
+            </div> -->
+
+        </div>
+    </div>
+
+
+    <script src="../assets/js/section_3-1.js"></script>
+</body>
+
+</html>
