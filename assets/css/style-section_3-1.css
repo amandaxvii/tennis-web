@@ -289,17 +289,29 @@
 
 .active {
     background: #d18237;
-    border: 2px solid #d18237;
-    /* transition: all 0.3s; */
+    transition: all 0.3s;
 }
+
+.line-active {
+    background: #fff;
+    border: 1px solid #fff;
+    transition: all 0.3s;
+}
+
+.court-lines {
+    display: flex;
+}
+
+#court-area-definition div {
+    display: none;
+}
+
 
 
 @media screen and (max-width: 767px) {
     .court-group {
         margin: 10rem auto;
     }
-
-
 
 }
 

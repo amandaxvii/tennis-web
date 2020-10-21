@@ -91,7 +91,7 @@
             <div class="outside-space">
                 <div class="court">
                     <!-- baseline -->
-                    <div class="baseline baseline-top">
+                    <div class="baseline baseline-top baseline-text">
                     </div>
 
                     <!-- left court -->
@@ -107,7 +107,7 @@
                             <div class="baseline-block">
                                 <div class="baseline-block-left ad-court"></div>
                                 <div class="backcourt"></div>
-                                <div class="center-mark-top"></div>
+                                <div class="center-mark-top center-mark"></div>
                                 <div class="baseline-block-right deuce-court"></div>
                             </div>
                             <div class="service-line service-line-top"></div>
@@ -148,7 +148,7 @@
                             <div class="baseline-block">
                                 <div class="baseline-block-right deuce-court "></div>
                                 <div class="backcourt"></div>
-                                <div class="center-mark-btm"></div>
+                                <div class="center-mark-btm center-mark"></div>
                                 <div class="baseline-block-left ad-court"></div>
                             </div>
                         </div>
@@ -161,7 +161,7 @@
                     </div>
 
                     <!-- baseline -->
-                    <div class="baseline baseline-btm"></div>
+                    <div class="baseline baseline-btm baseline-text"></div>
                 </div>
             </div>
 
@@ -172,26 +172,41 @@
                 <div class="court-glossary-select">
                     <label for="court-area">網球場區域</label>
                     <select name="court-area" id="court-area" class="glossary-select">
-                        <!-- <option value="" disabled selected>Select one option</option> -->
+                        <option value="" disabled selected>Please select one option</option>
                         <option value="deuce-court">Deuce court</option>
                         <option value="ad-court">Ad court</option>
                         <option value="alley">Alley</option>
                         <option value="backcourt">Backcourt</option>
                     </select>
                     <button type="submit" class="glossary-btn">確認</button>
+                    <div id="court-area-definition">
+                        <div class="deuce-court">
+                            Deuce court – 每邊球員右半邊的球場。
+                        </div>
+                        <div class="ad-court">
+                            Deuce court – 每邊球員右半邊的球場。
+                        </div>
+                    </div>
                 </div>
 
                 <div class="court-glossary-select">
                     <label for="court-line">網球場地線</label>
                     <select name="court-line" id="court-line" class="glossary-select">
-                        <!-- <option value="" disabled selected>Select one option</option> -->
-                        <option value="baseline">Baseline</option>
-                        <option value="Ad-court">Ad court</option>
-                        <option value="Alley">Alley</option>
-                        <option value="Backcourt">Backcourt</option>
-                        <option value=""></option>
+                        <option value="" disabled selected>Please select one option</option>
+                        <option value="baseline-text">Baseline</option>
+                        <option value="sideline-doubles">Side Line Doubles</option>
+                        <option value="sideline-singles">Side Line Singles</option>
+                        <option value="center-mark">Center Mark</option>
+                        <option value="center-service-line">Center Service Line</option>
+                        <option value="service-line">Service Line</option>
+                        <option value="net">Net</option>
                     </select>
-                    <button type="submit" class="glossary-btn-two">確認</button>
+                    <button type="submit" class="glossary-line-btn">確認</button>
+                    <div class="court-definition">
+                        <div class="baseline-text">
+                            Baseline（底線） – 在球場最遠兩端、用以界定比賽球場範圍的白線。
+                        </div>
+                    </div>
                 </div>
 
                 <!-- <table>
