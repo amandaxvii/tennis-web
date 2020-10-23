@@ -2,7 +2,7 @@ const glossaryForm = document.querySelector('.court-glossary-select')
 const courtAreaSelect = document.querySelector('#court-area')
 const courtLineSelect = document.querySelector('#court-line')
 const glossarySelect = document.querySelector('.glossary-select')
-const glossaryButton = document.querySelector('.glossary-btn')
+const glossaryButtonArea = document.querySelector('.glossary-area-btn')
 const glossaryButtonLine = document.querySelector('.glossary-line-btn')
 
 function courtAreaSelected() {
@@ -13,8 +13,8 @@ function courtAreaSelected() {
     const optionValue = courtAreaSelect.options[index].value
     console.log(optionValue)
 
-    const optionText = courtAreaSelect.options[index].text
-    console.log(optionText)
+    //  const optionText = courtAreaSelect.options[index].text
+    //  console.log(optionText)
 
     // 將 DOM 裡相對應的 option value class 取出
     const courtTransitions = document.querySelectorAll(`.${optionValue}`)
@@ -85,22 +85,83 @@ function courtLineSelected() {
     }
 }
 
-function definitionDisplay() {
-    const courtDefinition = document.querySelector('#court-area-definition')
-    console.log(courtDefinition)
+function definitionAreaDisplay() {
+    const courtDefinition = document.querySelector('.court-area-definition')
+
+    const index = courtAreaSelect.selectedIndex
+
+    const optionValue = courtAreaSelect.options[index].value
+
+    // 將 DOM 裡相對應的 option value class 取出
+    // const definitionDivArray = document.querySelectorAll(`.${optionValue}.court-area-definition`)
+
+    // const definitionDiv = definitionDivArray[0]
+    // console.log(definitionDiv)
+
+    const definitionDiv = document.querySelector(`#${optionValue}`)
 
     // select 下的 option change ，將上一個 transition 移除
     courtAreaSelect.addEventListener('change', function () {
-        courtDefinition.style.display = 'none'
+        definitionDiv.style.display = 'none'
+        definitionDiv.classList.remove('definition-active')
     })
 
-    if (courtDefinition.style.display === 'none') {
-        courtDefinition.style.display = 'block'
+    // 顯示 div
+    // if (definitionDiv.style.display === 'none') {
+    //     definitionDiv.style.display = 'block'
+    // } else {
+    //     definitionDiv.style.display = 'none'
+    // }
+
+
+
+    // 顯示 div & 加上 DOM 樣式
+    if ((definitionDiv.classList.contains('definition-active')) && (definitionDiv.style.display = 'block')) {
+        definitionDiv.classList.remove('definition-active')
+        definitionDiv.style.display = 'none'
     } else {
+        definitionDiv.classList.add('definition-active')
+        definitionDiv.style.display = 'block'
+    }
+
+    console.log(definitionDiv)
+}
+
+function definitionLineDisplay() {
+    const courtDefinition = document.querySelector('.court-line-definition')
+
+    const index = courtLineSelect.selectedIndex
+
+    const optionValue = courtLineSelect.options[index].value
+
+    const definitionDiv = document.querySelector(`#${optionValue}`)
+
+    // select 下的 option change ，將上一個 transition 移除
+    courtLineSelect.addEventListener('change', function () {
         courtDefinition.style.display = 'none'
+        definitionDiv.style.display = 'none'
+        definitionDiv.classList.remove('definition-active')
+    })
+
+    // 顯示 Div & 加上 DOM 樣式
+    if ((definitionDiv.classList.contains('definition-active')) && (definitionDiv.style.display = 'block')) {
+        definitionDiv.classList.remove('definition-active')
+        definitionDiv.style.display = 'none'
+    } else {
+        definitionDiv.classList.add('definition-active')
+        definitionDiv.style.display = 'block'
     }
 }
 
-glossaryButton.addEventListener('click', courtAreaSelected)
-glossaryButton.addEventListener('click', definitionDisplay)
-glossaryButtonLine.addEventListener('click', courtLineSelected)
+function courtAreaFunction() {
+    courtAreaSelected()
+    definitionAreaDisplay()
+}
+
+function courtLineFunction() {
+    courtLineSelected()
+    definitionLineDisplay()
+}
+
+glossaryButtonArea.addEventListener('click', courtAreaFunction)
+glossaryButtonLine.addEventListener('click', courtLineFunction)

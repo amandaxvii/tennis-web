@@ -91,77 +91,77 @@
             <div class="outside-space">
                 <div class="court">
                     <!-- baseline -->
-                    <div class="baseline baseline-top baseline-text">
+                    <div class="baseline baseline-top baseline-option">
                     </div>
 
                     <!-- left court -->
                     <div class="half-court">
                         <!-- top side court -->
                         <div class="side-court">
-                            <div class="sideline-doubles"></div>
+                            <div class="sideline-doubles sideline-doubles-option"></div>
                             <div class="sideline-block alley"></div>
-                            <div class="sideline-singles"></div>
+                            <div class="sideline-singles sideline-singles-option"></div>
                         </div>
                         <!-- baseline & service box -->
                         <div class="middle-court">
                             <div class="baseline-block">
                                 <div class="baseline-block-left ad-court"></div>
-                                <div class="backcourt"></div>
-                                <div class="center-mark-top center-mark"></div>
+                                <div class="backcourt-block backcourt"></div>
+                                <div class="center-mark-top center-mark center-mark-option"></div>
                                 <div class="baseline-block-right deuce-court"></div>
                             </div>
-                            <div class="service-line service-line-top"></div>
+                            <div class="service-line service-line-option service-line-top"></div>
 
                             <div class="service-group">
                                 <div class="service-box"></div>
-                                <div class="center-service-line"></div>
+                                <div class="center-service-line center-service-line-option"></div>
                                 <div class="service-box"></div>
                             </div>
                         </div>
                         <!-- bottom side court -->
                         <div class="side-court">
-                            <div class="sideline-singles"></div>
+                            <div class="sideline-singles sideline-singles-option"></div>
                             <div class="sideline-block alley"></div>
-                            <div class="sideline-doubles"></div>
+                            <div class="sideline-doubles sideline-doubles-option "></div>
                         </div>
                     </div>
 
                     <!-- net -->
-                    <div class="net"></div>
+                    <div class="net net-option"></div>
 
                     <!-- right court -->
                     <div class="half-court">
                         <!-- top side court -->
                         <div class="side-court">
-                            <div class="sideline-doubles"></div>
+                            <div class="sideline-doubles sideline-doubles-option"></div>
                             <div class="sideline-block alley"></div>
-                            <div class="sideline-singles"></div>
+                            <div class="sideline-singles sideline-singles-option"></div>
                         </div>
                         <!-- baseline & service box -->
                         <div class="middle-court">
                             <div class="service-group">
                                 <div class="service-box"></div>
-                                <div class="center-service-line"></div>
+                                <div class="center-service-line center-service-line-option"></div>
                                 <div class="service-box"></div>
                             </div>
-                            <div class="service-line service-line-btm"></div>
+                            <div class="service-line service-line-option service-line-btm"></div>
                             <div class="baseline-block">
                                 <div class="baseline-block-right deuce-court "></div>
-                                <div class="backcourt"></div>
-                                <div class="center-mark-btm center-mark"></div>
+                                <div class="backcourt-block backcourt"></div>
+                                <div class="center-mark-btm center-mark center-mark-option"></div>
                                 <div class="baseline-block-left ad-court"></div>
                             </div>
                         </div>
                         <!-- bottom side court -->
                         <div class="side-court">
-                            <div class="sideline-singles"></div>
+                            <div class="sideline-singles sideline-singles-option"></div>
                             <div class="sideline-block alley"></div>
-                            <div class="sideline-doubles"></div>
+                            <div class="sideline-doubles sideline-doubles-option"></div>
                         </div>
                     </div>
 
                     <!-- baseline -->
-                    <div class="baseline baseline-btm baseline-text"></div>
+                    <div class="baseline baseline-btm baseline-option"></div>
                 </div>
             </div>
 
@@ -170,7 +170,7 @@
                 <h2>網球場地術語</h2>
 
                 <div class="court-glossary-select">
-                    <label for="court-area">網球場區域</label>
+                    <label for="court-area">網球場區域：</label>
                     <select name="court-area" id="court-area" class="glossary-select">
                         <option value="" disabled selected>Please select one option</option>
                         <option value="deuce-court">Deuce court</option>
@@ -178,80 +178,60 @@
                         <option value="alley">Alley</option>
                         <option value="backcourt">Backcourt</option>
                     </select>
-                    <button type="submit" class="glossary-btn">確認</button>
-                    <div id="court-area-definition">
-                        <div class="deuce-court">
+                    <button type="submit" class="glossary-btn glossary-area-btn">確認</button>
+                    <div>
+                        <div class="court-area-definition" id="deuce-court">
                             Deuce court – 每邊球員右半邊的球場。
                         </div>
-                        <div class="ad-court">
-                            Deuce court – 每邊球員右半邊的球場。
+                        <div class="court-area-definition" id="ad-court">
+                            Ad court – 每邊球員的左側場區，因為佔先（Advantage）分總是在左側場區進行發球。
+                        </div>
+                        <div class="court-area-definition" id="alley">
+                            Alley – 網球場上，介於單打邊線（sideline/tramline）和雙打邊線之間的長條狀區域。
+                        </div>
+                        <div class="court-area-definition" id="backcourt">
+                            Backcourt（後場） – 球場中發球線（service line）與底線（baseline）之間的區域。
                         </div>
                     </div>
                 </div>
 
                 <div class="court-glossary-select">
-                    <label for="court-line">網球場地線</label>
+                    <label for="court-line">網球場球線：</label>
                     <select name="court-line" id="court-line" class="glossary-select">
                         <option value="" disabled selected>Please select one option</option>
-                        <option value="baseline-text">Baseline</option>
-                        <option value="sideline-doubles">Side Line Doubles</option>
-                        <option value="sideline-singles">Side Line Singles</option>
-                        <option value="center-mark">Center Mark</option>
-                        <option value="center-service-line">Center Service Line</option>
-                        <option value="service-line">Service Line</option>
-                        <option value="net">Net</option>
+                        <option value="baseline-option">Baseline</option>
+                        <option value="sideline-doubles-option">Side Line Doubles</option>
+                        <option value="sideline-singles-option">Side Line Singles</option>
+                        <option value="center-mark-option">Center Mark</option>
+                        <option value="center-service-line-option">Center Service Line</option>
+                        <option value="service-line-option">Service Line</option>
+                        <option value="net-option">Net</option>
                     </select>
-                    <button type="submit" class="glossary-line-btn">確認</button>
-                    <div class="court-definition">
-                        <div class="baseline-text">
-                            Baseline（底線） – 在球場最遠兩端、用以界定比賽球場範圍的白線。
+                    <button type="submit" class="glossary-btn glossary-line-btn">確認</button>
+                    <div>
+                        <div class="court-line-definition" id="baseline-option">
+                            Baseline（底線） – 在球場最遠兩端、用以界定比賽球場範圍的白線
+                        </div>
+                        <div class="court-line-definition" id="sideline-doubles-option">
+                            Sideline（邊線） - 界定雙打（doubles）有效區域兩側的線。
+                        </div>
+                        <div class="court-line-definition" id="sideline-singles-option">
+                            Sideline（邊線） - 界定單打（singles）有效區域兩側的線。
+                        </div>
+                        <div class="court-line-definition" id="center-mark-option">
+                            Center Mark（中點） – 球場底線中間位置。
+                        </div>
+                        <div class="court-line-definition" id="center-service-line-option">
+                            Center Service line（中線） – 在球場中間，垂直於網子、用來界定發球有效區域的直線。
+                        </div>
+                        <div class="court-line-definition" id="service-line-option">
+                            Service line（發球線） - 在球場中，平行於網子、用來界定發球有效區域最遠範圍的直線。
+                        </div>
+                        <div class="court-line-definition" id="net-option">
+                            Net（球網） - 以交錯的纖維線與帶子橫亙整個場寬，並由球柱（posts）支撐在場地中央
                         </div>
                     </div>
                 </div>
-
-                <!-- <table>
-                    <tr>
-                        <td>Deuce court</td>
-                        <td>每邊球員右半邊的球場。</td>
-                    </tr>
-                    <tr>
-                        <td>Ad court</td>
-                        <td>每邊球員的左側場區，因為佔先（Advantage）分總是在左側場區進行發球。</td>
-                    </tr>
-                    <tr>
-                        <td>Alley</td>
-                        <td>網球場上，介於單打邊線（sideline/tramline）和雙打邊線之間的長條狀區域。</td>
-                    </tr>
-                    <tr>
-                        <td>Backcourt</td>
-                        <td>後場，球場中發球線（service line）與底線（baseline）之間的區域。</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                </table> -->
-
 
             </div>
             <!-- 
