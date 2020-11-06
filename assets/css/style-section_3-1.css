@@ -2,6 +2,10 @@
     width: 100%;
 }
 
+.court-layout div {
+    /* z-index: -2; */
+}
+
 .court-group {
     margin: 10rem auto;
     width: 85%;
@@ -10,19 +14,15 @@
     justify-content: center;
     align-items: center;
     position: relative;
-
 }
-
 
 .outside-space {
     width: 80%;
     height: 30vh;
-    background: #2978ff;
-    border: 1px solid #888;
+    background: #324856;
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .court {
@@ -36,59 +36,6 @@
     width: 2px;
     background: #000;
     position: relative;
-    cursor: pointer;
-}
-
-.baseline-top:before {
-    content: 'baseline';
-    position: absolute;
-    left: 40%;
-    top: -25px;
-    opacity: 0;
-}
-
-.baseline-btm:before {
-    content: 'baseline';
-    position: absolute;
-    left: 40%;
-    top: 6px;
-    opacity: 0;
-}
-
-/* hover 效果 */
-.baseline:hover:before,
-.sideline-singles:hover:before,
-.service-line:hover::before,
-.center-mark-top:hover:before,
-.center-mark-btm:hover:before,
-.center-service-line:hover:before,
-.net:hover:before {
-    opacity: 1;
-}
-
-.baseline:hover,
-.sideline-doubles:hover,
-.sideline-singles:hover,
-.service-line:hover,
-.center-mark-top:hover,
-.center-mark-btm:hover,
-.center-service-line:hover,
-.net:hover {
-    background: #f0f;
-}
-
-.baseline:hover,
-.service-line:hover,
-.net:hover {
-    height: 3px;
-}
-
-.sideline-doubles:hover,
-.sideline-singles:hover,
-.center-mark-top:hover,
-.center-mark-btm:hover,
-.center-service-line:hover {
-    width: 3px;
 }
 
 .half-court {
@@ -111,20 +58,8 @@
     position: relative;
 }
 
-.sideline-doubles:before {
-    content: 'sideline(doubles)';
-    position: absolute;
-    top: 70%;
-    left: 6px;
-    opacity: 0;
-}
-
-.sideline-doubles:hover:before {
-    opacity: 1;
-}
-
 .sideline-block {
-    background: #888;
+    background: #4a746a;
     height: calc(100% - 4px);
     width: 100%;
 }
@@ -135,15 +70,6 @@
     height: 2px;
     position: relative;
 }
-
-.sideline-singles:before {
-    content: 'sideline(singles)';
-    position: absolute;
-    left: 6px;
-    top: 20%;
-    opacity: 0;
-}
-
 
 .middle-court {
     width: 100%;
@@ -162,13 +88,13 @@
 .baseline-block-left {
     width: 100%;
     height: 50%;
-    background: rgb(104, 169, 0);
+    background: #4a746a;
 }
 
 .baseline-block-right {
     width: 100%;
     height: 50%;
-    background: rgb(104, 169, 0);
+    background: #4a746a;
 }
 
 .center-mark-top {
@@ -178,7 +104,6 @@
     position: absolute;
     left: 0;
     top: calc(50% - 1px);
-    cursor: pointer;
 }
 
 .backcourt-block {
@@ -196,7 +121,6 @@
     position: absolute;
     left: calc(100% - 7px);
     top: calc(50% - 1px);
-    cursor: pointer;
 }
 
 .service-line {
@@ -204,22 +128,6 @@
     background: #000;
     height: 100%;
     position: relative;
-}
-
-.service-line-top::before {
-    content: 'service line';
-    position: absolute;
-    top: -25px;
-    left: 30%;
-    opacity: 0;
-}
-
-.service-line-btm::before {
-    content: 'service line';
-    position: absolute;
-    top: 5px;
-    left: 30%;
-    opacity: 0;
 }
 
 .service-group {
@@ -232,7 +140,7 @@
 .service-box {
     width: 100%;
     height: calc(50% - 1px);
-    background: rgb(104, 169, 0);
+    background: #4a746a;
 }
 
 .center-service-line {
@@ -240,14 +148,6 @@
     height: 2px;
     background: #000;
     position: relative;
-}
-
-.center-service-line:before {
-    content: 'center service line';
-    position: absolute;
-    top: 5px;
-    left: 6px;
-    opacity: 0;
 }
 
 .net {
@@ -258,14 +158,7 @@
     top: -5%;
 }
 
-.net:before {
-    content: 'net';
-    position: absolute;
-    top: 0;
-    left: -15px;
-    opacity: 0;
-}
-
+/* 網球術語版面 */
 .court-glossary {
     width: 100%;
     margin: 30px auto;
@@ -273,21 +166,33 @@
 }
 
 .court-glossary h2 {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .court-glossary-select {
     margin: 10px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.court-glossary-select label {
+    font-size: 1.6rem;
 }
 
 .court-glossary-select select {
-    margin: 0 10px 0 2px;
-    padding: 2px;
+    margin: 0 5px 0 2px;
+    padding: 3px;
+    width: 70%;
 }
 
 .court-glossary-select .glossary-btn {
-    width: 60px;
-    padding: 2px;
+    width: 20%;
+    padding: 5px;
+    background: #D66c44;
+    color: #fff;
+    border-color: #d66c44;
+    border-radius: 2px;
 }
 
 /* .court-btn {
@@ -318,9 +223,9 @@
 
 .court-area-definition,
 .court-line-definition {
-    width: 80%;
+    width: 90%;
     padding: 10px 12px;
-    margin: 2px auto 30px;
+    margin: 5px auto 10px;
     text-align: center;
     line-height: 2.5rem;
     display: none;
@@ -331,23 +236,57 @@
     background: #4a746a;
 }
 
-
+/* 手機螢幕 */
 @media screen and (max-width: 767px) {
+
+    .outside-space {
+        width: 300px;
+        height: 150px;
+    }
+
     .court-group {
         margin: 10rem auto;
     }
 
+    .court-glossary-select label {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
 }
 
+/* 平板螢幕 - 直式 */
 @media screen and (min-width: 768px) {
     .court-group {
         margin: 13rem auto;
     }
 
     .outside-space {
-        width: 50%;
+        width: 600px;
+        height: 280px;
+    }
+
+    .court-glossary-select {
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+    }
+
+    .court-glossary-select label {
+        width: 15%;
 
     }
 
+    .court-glossary-select select {
+        width: 30%;
+        margin-right: 20px;
+    }
+
+    .court-glossary-select .glossary-btn {
+        width: 12%;
+    }
 
 }
+
+/* 電腦螢幕 */
+@media screen and (min-width: 992px) {}

@@ -11,6 +11,9 @@
     width: 100%;
     position: fixed;
     top: 10px;
+
+    /* 為了不要讓內容的層級被蓋過去 */
+    z-index: 10;
 }
 
 .header-content {
@@ -85,11 +88,18 @@ nav i {
     width: 40%;
     position: fixed;
     top: 6rem;
+
+    /* 為了不要讓內容的層級被蓋過去 */
+    z-index: 10;
 }
 
 .breadcrumbs-list {
     display: flex;
-    margin: 0 auto 0 0.5rem;
+    margin: 0 1rem;
+}
+
+.breadcrumbs-list a {
+    color: #fefcfd;
 }
 
 .breadcrumbs-list>li {
@@ -100,10 +110,11 @@ nav i {
     content: "/";
     left: 0;
     padding-right: 0.5rem;
+    color: #fefcfd;
 }
 
 .breadcrumbs-list li:hover a {
-    color: #f00;
+    color: #324856;
 }
 
 .wrapper {
@@ -163,7 +174,6 @@ footer {
         top: 100%;
         border-radius: 0.5rem;
         background: #fefcfd;
-
 
         display: none;
         opacity: 0;
