@@ -1,0 +1,189 @@
+/* 共同設定 */
+h3,
+h2 {
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+}
+
+table th,
+td {
+    border: 1px solid #ddd;
+    padding: 6px;
+    color: #444;
+}
+
+.responsive-table {
+    /* Responsive Tables */
+    overflow-x: auto;
+}
+
+/* 用來設定與 fixed header 的距離 */
+.wrap-top {
+    padding: 90px 0 0;
+}
+
+.wrap-side {
+    padding: 0 30px;
+}
+
+/* section 2-1 */
+.tournament-card-wrap {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    padding: 0 30px;
+}
+
+.tournament-card {
+    width: 45%;
+    border: 1px solid #888;
+    border-radius: 5px;
+    padding: 6px 20px;
+    margin-bottom: 1.5rem;
+}
+
+.tournament-card h3 {
+    text-align: center;
+}
+
+.tournament-card i {
+    padding: 0 8px 0 0;
+}
+
+.tournament-card p {
+    margin: 0;
+    padding: 0.5rem 0;
+}
+
+.tournament-card ul {
+    list-style-position: inside;
+    padding: 0.5rem 0 2rem 1.6rem;
+}
+
+.tournament-card ul li {
+    list-style-type: disc;
+}
+
+/* points table */
+.points-wrap {
+    padding: 20px 30px 0;
+}
+
+.points-table {
+    margin: 15px 0 30px;
+}
+
+.points-table th,
+td {
+    min-width: 110px;
+}
+
+.points-table th {
+    text-align: center;
+    background: #324856;
+    color: #fefcfd;
+    padding: 10px 0 10px;
+}
+
+.points-table td {
+    text-align: center;
+}
+
+.points-table td:first-child {
+    min-width: 160px;
+}
+
+.points-table tr:nth-child(even) {
+    background: #d18237;
+}
+
+.points-table tr:nth-child(odd) {
+    background: #d18137c8;
+}
+
+.points-table tr:hover {
+    background-color: #d66c44;
+}
+
+/* section 2-2 tournament content */
+.tournament-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.tournament-section .item {
+    background: #D18237;
+    border-radius: 100px;
+    text-align: center;
+    vertical-align: center;
+}
+
+.tournament-section .item p {
+    color: #fefcfd;
+}
+
+/* 設定與頁面寬度距離，水平置中 */
+.tournament-wrap {
+    padding: 18px 30px 0;
+    margin: 0 auto;
+}
+
+.tournament-table th,
+td {
+    text-align: center;
+}
+
+.tournament-table th {
+    padding: 10px 0 0 0;
+    background: #324856;
+    color: #fefcfd;
+    font-size: 1.6rem;
+    border-bottom: hidden;
+    min-width: 300px;
+}
+
+.tournament-table td {
+    background: #d18237;
+    color: #fefcfd;
+    padding: 8px 0;
+}
+
+.tournament-table tbody tr:first-child td {
+    background: #324856;
+    padding-top: 0;
+    padding-bottom: 10px;
+}
+
+.tournament-table tr td:hover {
+    background-color: #d66c44;
+}
+
+/* 手機螢幕 */
+@media screen and (max-width: 767px) {
+    .breadcrumbs {
+        display: none;
+    }
+
+    .tournament-card-wrap {
+        max-width: 767px;
+        flex-wrap: wrap;
+    }
+
+    .tournament-card {
+        width: 100%;
+    }
+
+}
+
+/* 平板螢幕 */
+@media screen and (min-width: 768px) {}
+
+/* 電腦螢幕 */
+@media screen and (min-width:992px) {}

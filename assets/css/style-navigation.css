@@ -83,40 +83,6 @@ nav i {
     color: #261a28;
 }
 
-/* breadcrumbs */
-.breadcrumbs {
-    width: 40%;
-    position: fixed;
-    top: 6rem;
-
-    /* 為了不要讓內容的層級被蓋過去 */
-    z-index: 10;
-}
-
-.breadcrumbs-list {
-    display: flex;
-    margin: 0 1rem;
-}
-
-.breadcrumbs-list a {
-    color: #fefcfd;
-}
-
-.breadcrumbs-list>li {
-    padding: 1rem 0.5rem;
-}
-
-.breadcrumbs-list>li+li::before {
-    content: "/";
-    left: 0;
-    padding-right: 0.5rem;
-    color: #fefcfd;
-}
-
-.breadcrumbs-list li:hover a {
-    color: #324856;
-}
-
 .wrapper {
     width: 80%;
     text-align: center;
@@ -237,11 +203,6 @@ footer {
         color: #fff;
     }
 
-    .breadcrumbs {
-        left: 3rem;
-        width: 100%;
-    }
-
     .wrapper {
         margin: 65vh auto 5vh;
     }
@@ -306,10 +267,6 @@ footer {
         color: #fff;
     }
 
-    .breadcrumbs {
-        left: 5rem;
-    }
-
     .wrapper {
         margin: 50vh auto 25vh;
     }
@@ -318,9 +275,6 @@ footer {
 /* 電腦螢幕 */
 @media screen and (min-width: 992px) {
 
-    .breadcrumbs {
-        left: 7rem;
-    }
 
     .wrapper {
         margin: 50vh auto 25vh;

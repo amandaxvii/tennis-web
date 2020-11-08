@@ -1,4 +1,8 @@
 /* 共用設定 */
+h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1.2rem;
+}
 
 h2 {
     font-size: 2.5rem;
@@ -17,60 +21,31 @@ p {
     margin-bottom: 2.5rem;
 }
 
-.wrap-fluid {
-    width: 100%;
+.wrap-top {
+    padding: 90px 0 0;
 }
 
+.wrap-side {
+    padding: 0 30px;
+}
+
+/* section title */
 .title {
-    width: 85%;
-    margin: 8rem auto 1rem;
-    padding: 2rem 1rem;
+    width: 100%;
     text-align: justify;
+    margin: 0 auto;
 }
 
 .title h1 {
     text-align: center;
-    margin-bottom: 1.2rem;
+
 }
 
 /* section contents */
-section {
-    padding: 1.5rem 0;
-    width: 100%;
-    /* background: #d66c44; */
-}
 
 section p,
 li {
     color: #222;
-}
-
-section .breadcrumbs {
-    width: 150px;
-    line-height: 20px;
-    position: relative;
-    top: -2rem;
-    left: 8rem;
-    background: #d66c44;
-    border-radius: 3px 0 0 3px;
-    z-index: 0;
-}
-
-section .breadcrumbs::after {
-    content: '';
-    display: block;
-    position: absolute;
-    width: 0;
-    height: 0;
-    top: 0;
-    left: 100%;
-    border-top: 40px solid #d66c44;
-    border-right: 15px solid transparent;
-}
-
-section .wrap {
-    width: 65%;
-    margin: 0 auto;
 }
 
 section .article {
@@ -123,19 +98,6 @@ section .article-card a:hover {
 /* 手機螢幕 */
 @media screen and (max-width: 767px) {
 
-    .title {
-        width: 82%;
-    }
-
-    section .wrap {
-        width: 82%;
-        padding: 0 1rem;
-    }
-
-    section .breadcrumbs {
-        left: 4rem;
-    }
-
     section .article-card-wrap {
         flex-wrap: wrap;
     }
@@ -149,13 +111,7 @@ section .article-card a:hover {
 }
 
 /* 平板螢幕 */
-@media screen and (min-width: 768px) {
-
-    section .logo-img {
-        width: 10%;
-    }
-
-}
+@media screen and (min-width: 768px) {}
 
 /* 電腦螢幕 */
 @media screen and (min-width: 992px) {}

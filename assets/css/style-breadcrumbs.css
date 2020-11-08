@@ -1,0 +1,61 @@
+/* breadcrumbs */
+.breadcrumbs {
+    max-width: 140px;
+    line-height: 16px;
+    height: 38px;
+    position: relative;
+    top: 0;
+    left: 0rem;
+    background: #d66c44;
+    border-radius: 3px 0 0 3px;
+    z-index: 0;
+    margin-bottom: 20px;
+}
+
+.breadcrumbs::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 0;
+    left: 100%;
+    border-top: 38px solid #d66c44;
+    border-right: 12px solid transparent;
+}
+
+.breadcrumbs-list {
+    display: flex;
+    padding: 0 0 0 1rem;
+}
+
+.breadcrumbs-list a {
+    font-size: 1.2rem;
+    color: #fefcfd;
+}
+
+.breadcrumbs-list>li {
+    padding: 1rem 0.5rem 1rem 0;
+}
+
+.breadcrumbs-list>li+li::before {
+    content: "/";
+    left: 0;
+    padding-right: 0.5rem;
+    color: #fefcfd;
+}
+
+.breadcrumbs-list li:hover a {
+    color: #324856;
+}
+
+
+
+/* 手機螢幕 */
+@media screen and (max-width: 767px) {}
+
+/* 平板螢幕 */
+@media screen and (min-width: 768px) {}
+
+/* 電腦螢幕 */
+@media screen and (min-width: 992px) {}

@@ -11,9 +11,11 @@
     <link rel="stylesheet" href="../assets/css/style-all.css">
     <!-- navigation styles -->
     <link rel="stylesheet" href="../assets/css/style-navigation.css">
+    <!-- breadcrumbs styles -->
+    <link rel="stylesheet" href="../assets/css/style-breadcrumbs.css">
     <link rel="stylesheet" href="../assets/css/style-section_1-1.css">
     <!-- section2 side bar -->
-    <link rel="stylesheet" href="../assets/css/style-section_2-side-bar.css">
+    <link rel="stylesheet" href="../assets/css/style-section_2.css">
     <title>Document</title>
 </head>
 
@@ -48,11 +50,12 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="">重點賽事</a>
+                        <a href="section_2-0.html">重點賽事</a>
                         <i class="fas fa-angle-down"></i>
                         <ul class="nav-submenu">
-                            <li><a href="section_2-1.html">大滿貫</a></li>
-                            <li><a href="section_2-2.html">ATP 巡迴賽</a></li>
+                            <li><a href="section_2-1.html">賽事積分列表</a></li>
+                            <li><a href="section_2-2.html">大滿貫</a></li>
+                            <li><a href="section_2-3.html">ATP 巡迴賽</a></li>
                             <li><a href="">WTA 巡迴賽</a></li>
                         </ul>
                     </li>
@@ -71,89 +74,216 @@
         </div>
     </header>
 
-    <!-- breadcrumbs list -->
-    <div class="breadcrumbs">
-        <ul class="breadcrumbs-list">
-            <li><a href="section_2-1.html">大滿貫</a></li>
-            <li><a href="section_2-2.html">ATP巡迴賽</a></li>
-            <li><a href="">WTA巡迴賽</a></li>
-        </ul>
+    <div class="wrap-top">
+
+        <!-- breadcrumbs list -->
+        <div class="breadcrumbs">
+            <ul class="breadcrumbs-list">
+                <li><a href="section_2-1.html">賽事積分</a></li>
+                <li><a href="section_2-2.html">大滿貫</a></li>
+                <li><a href="section_2-3.html">ATP tour</a></li>
+                <li><a href="">WTA tour</a></li>
+            </ul>
+        </div>
+
+        <div class="tournament-card-wrap">
+            <h2>職業網球賽事列表</h2>
+            <div class="tournament-card">
+                <h3>男子職業網球賽事</h3>
+
+                <p><i class="far fa-calendar"></i>四大滿貫</p>
+                <ul>
+                    <li>澳洲網球公開賽</li>
+                    <li>法國網球公開賽</li>
+                    <li>溫布爾頓網球公開賽</li>
+                    <li>美國網球公開賽</li>
+                </ul>
+
+                <p><i class="far fa-calendar"></i>ATP 世界巡迴賽</p>
+                <ul>
+                    <li>ATP世界巡迴賽總決賽</li>
+                    <li>1000系列大師賽</li>
+                    <li>500系列賽</li>
+                    <li>250系列賽</li>
+                </ul>
+
+                <p><i class="far fa-calendar"></i>ATP挑戰賽</p>
+                <ul>
+                    <li>ATP挑戰賽總決賽</li>
+                </ul>
+
+                <p><i class="far fa-calendar"></i>國際網聯賽事</p>
+                <ul>
+                    <li>ITF男子巡迴賽</li>
+                    <li>台維斯盃</li>
+                    <li>霍普曼盃</li>
+                    <li>奧運會網球賽事</li>
+                </ul>
+
+            </div>
+            <div class="tournament-card">
+                <h3>女子職業網球賽事</h3>
+                <p><i class="far fa-calendar"></i>四大滿貫</p>
+                <ul>
+                    <li>澳洲網球公開賽</li>
+                    <li>法國網球公開賽</li>
+                    <li>溫布爾頓網球公開賽</li>
+                    <li>美國網球公開賽</li>
+                </ul>
+
+                <p><i class="far fa-calendar"></i>WTA 巡迴賽</p>
+                <ul>
+                    <li>年終錦標賽 WTA Finals</li>
+                    <li>皇冠賽 WTA Premier Mandatory</li>
+                    <li>超五賽 WTA Premier 5</li>
+                    <li>常規頂級賽 WTA Premier</li>
+                    <li>國際巡迴賽 WTA International</li>
+                </ul>
+                <p><i class="far fa-calendar"></i>WTA 挑戰賽</p>
+                <ul>
+                    <li>WTA 125k Series</li>
+                </ul>
+                <p><i class="far fa-calendar"></i>國際網聯賽事</p>
+                <ul>
+                    <li>ITF女子巡迴賽</li>
+                    <li>台維斯盃</li>
+                    <li>霍普曼盃</li>
+                    <li>奧運會網球賽事</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="points-wrap">
+            <h2>網球賽事積分列表</h2>
+
+            <div class="responsive-table">
+                <table class="points-table">
+                    <h3>ATP 男子積分</h3>
+                    <thead>
+                        <tr>
+                            <th>賽事類別</th>
+                            <th>賽事數量</th>
+                            <th>冠軍所獲積分</th>
+                            <th>主辦機構</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>四大滿貫</td>
+                            <td>4</td>
+                            <td>2000</td>
+                            <td>ITF</td>
+                        </tr>
+                        <tr>
+                            <td>ATP世界巡迴賽總決賽</td>
+                            <td>1</td>
+                            <td>1100–1500</td>
+                            <td>ATP</td>
+                        </tr>
+                        <tr>
+                            <td>1000系列大師賽</td>
+                            <td>9</td>
+                            <td>1000</td>
+                            <td>ATP</td>
+                        </tr>
+                        <tr>
+                            <td>500系列賽</td>
+                            <td>13</td>
+                            <td>500</td>
+                            <td>ATP</td>
+                        </tr>
+                        <tr>
+                            <td>250系列賽</td>
+                            <td>39</td>
+                            <td>250</td>
+                            <td>ATP</td>
+                        </tr>
+                        <tr>
+                            <td>ATP挑戰賽</td>
+                            <td>178</td>
+                            <td>80-125</td>
+                            <td>ATP</td>
+                        </tr>
+                        <tr>
+                            <td>ITF男子巡迴賽</td>
+                            <td>534</td>
+                            <td>18-35</td>
+                            <td>ITF</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="responsive-table">
+                <table class="points-table">
+                    <h3>WTA 女子積分</h3>
+                    <thead>
+                        <tr>
+                            <th>賽事類別</th>
+                            <th>賽事數量</th>
+                            <th>冠軍所獲積分</th>
+                            <th>主辦機構</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>四大滿貫</td>
+                            <td>4</td>
+                            <td>2000</td>
+                            <td>ITF</td>
+                        </tr>
+                        <tr>
+                            <td>年終錦標賽</td>
+                            <td>1</td>
+                            <td>1500</td>
+                            <td>WTA</td>
+                        </tr>
+                        <tr>
+                            <td>皇冠賽</td>
+                            <td>4</td>
+                            <td>1000</td>
+                            <td>WTA</td>
+                        </tr>
+                        <tr>
+                            <td>超五賽</td>
+                            <td>5</td>
+                            <td>900</td>
+                            <td>WTA</td>
+                        </tr>
+                        <tr>
+                            <td>常規頂級賽</td>
+                            <td>12</td>
+                            <td>470</td>
+                            <td>WTA</td>
+                        </tr>
+                        <tr>
+                            <td>國際巡迴賽</td>
+                            <td>178</td>
+                            <td>32</td>
+                            <td>WTA</td>
+                        </tr>
+                        <tr>
+                            <td>WTA 挑戰賽</td>
+                            <td>10*</td>
+                            <td>160</td>
+                            <td>WTA</td>
+                        </tr>
+                        <tr>
+                            <td>ITF女子巡迴賽</td>
+                            <td>約500</td>
+                            <td>12-150</td>
+                            <td>ITF</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>* WTA 挑戰賽，每年的賽事場次會有變動</p>
+        </div>
+
+
     </div>
-
-    <!-- side bar -->
-    <!-- <div class="side-bar">
-        <ul class="side-bar-menu">
-            <li><a href="#tournament-JAN">1月</a></li>
-            <li><a href="">2月</a></li>
-            <li><a href="">3月</a></li>
-            <li><a href="">4月</a></li>
-            <li><a href="">5月</a></li>
-            <li><a href="">6月</a></li>
-            <li><a href="">7月</a></li>
-            <li><a href="">8月</a></li>
-            <li><a href="">9月</a></li>
-            <li><a href="">10月</a></li>
-            <li><a href="">11月</a></li>
-            <li><a href="">12月</a></li>
-        </ul>
-    </div> -->
-
-    <section class="tournament-section">
-        <div class="tournament-wrap tournament-title">
-            <ul class="tournament-menu">
-                <li>賽事名稱</li>
-                <li>等級</li>
-                <li>場地</li>
-                <li>時間</li>
-            </ul>
-        </div>
-
-        <div class="tournament-wrap" id="tournament-JAN">
-            <ul class="tournament-menu">
-                <li>澳州網球公開賽</li>
-                <li>大滿貫</li>
-                <li>硬地</li>
-                <li>一月</li>
-            </ul>
-        </div>
-
-
-        <div class="tournament-wrap"></div>
-        <div class="tournament-wrap"></div>
-        <div class="tournament-wrap"></div>
-        <div class="tournament-wrap">
-            <ul class="tournament-menu">
-                <li>法國網球公開賽</li>
-                <li>大滿貫</li>
-                <li>紅土</li>
-                <li>五月</li>
-            </ul>
-        </div>
-
-        <div class="tournament-wrap">
-            <ul class="tournament-menu">
-                <li>溫布頓網球錦標賽</li>
-                <li>大滿貫</li>
-                <li>草地</li>
-                <li>六月</li>
-            </ul>
-        </div>
-        <div class="tournament-wrap"></div>
-        <div class="tournament-wrap">
-            <ul class="tournament-menu">
-                <li>美國網球公開賽</li>
-                <li>大滿貫</li>
-                <li>硬地</li>
-                <li>八月</li>
-            </ul>
-        </div>
-        <div class="tournament-wrap"></div>
-        <div class="tournament-wrap"></div>
-        <div class="tournament-wrap"></div>
-        <div class="tournament-wrap"></div>
-    </section>
-
-
 
 </body>
 
