@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+
+    <!-- common styles for all pages -->
+    <link rel="stylesheet" href="../assets/css/style-all.css">
+    <!-- navigation styles -->
+    <link rel="stylesheet" href="../assets/css/style-navigation.css">
+
+    <link rel="stylesheet" href="../assets/css/style-section_3-1.css">
+    <link rel="stylesheet" href="../assets/css/style-section_3-2.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- 控制 label checkbox -->
+    <input type="checkbox" name="" id="menu-control">
+
+    <!-- navigation fixed -->
+    <header class="header">
+        <div class="header-content">
+            <a href="../index.html" class="home-icon">
+                <i class="fas fa-home "></i>
+            </a>
+
+            <!-- 漢堡選單 -->
+            <label for="menu-control">
+                <div class="header-rwd-icon">
+                    <i class="fas fa-bars"></i>
+                    <i class="fas fa-times"></i>
+                </div>
+            </label>
+
+            <nav>
+                <ul class="nav-menu">
+                    <li>
+                        <a href="section_1.html">組織介紹</a>
+                        <i class="fas fa-angle-down"></i>
+                        <ul class="nav-submenu">
+                            <li><a href="section_1-1.html">ITF</a></li>
+                            <li><a href="section_1-2.html">ATP</a></li>
+                            <li><a href="section_1-3.html">WTA</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">重點賽事</a>
+                        <i class="fas fa-angle-down"></i>
+                        <ul class="nav-submenu">
+                            <li><a href="section_2-1.html">賽事積分列表</a></li>
+                            <li><a href="section_2-2.html">大滿貫</a></li>
+                            <li><a href="section_2-3.html">ATP 巡迴賽</a></li>
+                            <li><a href="section_2-4.html">WTA 巡迴賽</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">比賽規則</a>
+                        <i class="fas fa-angle-down"></i>
+                        <ul class="nav-submenu">
+                            <li><a href="section_3-1.html">球場</a></li>
+                            <li><a href="section_3-2.html">計分系統</a></li>
+                            <li><a href="">人員</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- breadcrumbs list fixed -->
+    <div class="breadcrumbs">
+        <ul class="breadcrumbs-list">
+            <li><a href="#">球場</a></li>
+            <li><a href="#">得分</a></li>
+            <li><a href="">比分</a></li>
+            <li><a href="">人員</a></li>
+        </ul>
+    </div>
+
+    <!-- contents -->
+    <div class="wrap-top">
+
+        <!-- Intro -->
+        <div class="wrap-side">
+            <div class="title">
+                <h2>計分系統</h2>
+                <p>網球比賽的計分單位有四個，分別是：
+                </p>
+                <div class="unit-list">
+
+                    <li><a href="#point">分（point）</a></li>
+                    <li>局（game）</li>
+                    <li>盤（set）</li>
+                    <li>場（match）</li>
+                </div>
+                <p>單、雙打計分方式一樣。（以下皆以三盤二勝制為例做說明）</p>
+                <div class="score-system-list">
+                    <li>四分（point）<i class="fas fa-arrow-circle-right"></i> 贏得一局（game）</li>
+                    <li>六局（game）<i class="fas fa-arrow-circle-right"></i> 贏得一盤（set）</li>
+                    <li>二盤（set）<i class="fas fa-arrow-circle-right"></i> 贏得比賽（match）</li>
+                </div>
+            </div>
+
+            <!-- 計分板 -->
+            <div class="score-example-wrap">
+                <h4>比分範例</h4>
+                <div class="responsive-table">
+                    <table class="score-board-table score-display">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th></th>
+                                <th>Game</th>
+                                <th>Set</th>
+                                <th>1</th>
+                                <th>2</th>
+                                <th>3</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>球員 A</td>
+                                <td><i class="fas fa-caret-left"></i></td>
+                                <td>40</td>
+                                <td>1</td>
+                                <td data-set="set1">6</td>
+                                <td data-set="set2">2</td>
+                                <td data-set="set3">3</td>
+                            </tr>
+                            <tr>
+                                <td>球員 B</td>
+                                <td></td>
+                                <td>15</td>
+                                <td>1</td>
+                                <td data-set="set1">4</td>
+                                <td data-set="set2">6</td>
+                                <td data-set="set3">0</td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                </div>
+
+                <div class="score-details-list" id="score-details-set1" data-set="set1">
+                    <h5>第一盤 Set 1</h5>
+                    <div class="score-details-item">
+                        <p>球員 A 贏得此盤</p>
+                        <p>局數 6-4</p>
+                    </div>
+                </div>
+
+                <div class="score-details-list" id="score-details-set2" data-set="set2">
+                    <h5>第二盤 Set 2</h5>
+                    <div class="score-details-item">
+                        <p>球員 B 贏得此盤</p>
+                        <p>局數 6-2</p>
+                    </div>
+                </div>
+
+                <div class="score-details-list" id="score-details-set3" data-set="set3">
+                    <h5>第三盤 Set 3</h5>
+                    <div class="score-details-item">
+                        <p>球員 A 在第四局發球</p>
+                        <p>局數 3-0</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- section1: point -->
+        <section id="point">
+            <div class="wrap-fluid-bg">
+                <div class="wrap-side">
+                    <h3>分 point</h3>
+                    <p>一場網球比賽 (match) 一般由一至五盤 (set) 比賽構成，而每一盤 (set) 一般又分成數局 (game)，運動員通過<strong>得分 (point) </strong>來贏得局
+                        (game)，率先贏得規定局數的運動員贏得一盤，而率先贏得規定盤數的運動員則贏得比賽。</p>
+
+                    <div class="responsive-table">
+                        <table class="table-blue-head table-striped-orange point-system-table">
+                            <thead>
+                                <tr>
+                                    <th>得分狀態</th>
+                                    <th>分數呼叫</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>0 points 無得分</td>
+                                    <td>“Love”</td>
+                                </tr>
+                                <tr>
+                                    <td>1 point 第一分</td>
+                                    <td>“15” fifteen</td>
+                                </tr>
+                                <tr>
+                                    <td>2 points 第二分</td>
+                                    <td>“30” thirty</td>
+                                </tr>
+                                <tr>
+                                    <td>3 points 第三分</td>
+                                    <td>“40” forty</td>
+                                </tr>
+                                <tr>
+                                    <td>贏得該局</td>
+                                    <td>“Game”</td>
+                                </tr>
+                                <tr>
+                                    <td>Tied score 雙方分數平手</td>
+                                    <td>"All"</td>
+                                </tr>
+                                <tr>
+                                    <td>40-40 平局</td>
+                                    <td>“Deuce”</td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- section2: game -->
+        <section id="game">
+            <div class="wrap-fluid-bg">
+                <div class="wrap-side">
+                    <h3>局 game</h3>
+                    <p>一局（game）比賽只有一名運動員發球，率先<strong>贏得至少 4 分並多出對手至少 2
+                            分的運動員贏得一局</strong>。一局比賽中，每一次發球必須在半場的兩個發球區輪流，每局第一次發球應先從右邊開始。</p>
+                    <p>網球每局的記分方法：從 0 至 3 分分別為「零」（love）、「十五」（fifteen）、「三十」（thirty）和「四十」（forty）。記分時，發球手的得分在前。因此「30 比
+                        0」的意思是，發球手贏得 2 分，而接球手還未得分。
+                    </p>
+
+                    <div class="sub-title">
+                        <h4>平局 Deuce</h4>
+                        <p>當雙方運動員都得到了 3 分（40 比 40）時，一般叫「平局」（deuce）而非 (forty-all)。</p>
+                        <p>在出現平局後一名球手再得一分，被稱為「占先」（advantage），而不再記分。如果在占先的情況下失去一分，就再度回到平局；如占先後再得一分，就贏得一局。</p>
+                    </div>
+
+                    <!-- 一局比分範例 -->
+                    <div class="responsive-table">
+                        <table class="table-blue-head table-striped-orange example-game-scores">
+                            <thead>
+                                <tr>
+                                    <th>一局比分範例</th>
+                                    <th>分數呼叫</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>40-0</td>
+                                    <td>forty-love</td>
+                                </tr>
+                                <tr>
+                                    <td>30-40</td>
+                                    <td>thirty-forty</td>
+                                </tr>
+                                <tr>
+                                    <td>15-15</td>
+                                    <td>fifteen-all</td>
+                                </tr>
+                                <tr>
+                                    <td>40-40</td>
+                                    <td>deuce</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h5>一局比分試算</h5>
+                    <div class="responsive-table">
+                        <table class="score-board-table game-display">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th></th>
+                                    <th>Game</th>
+                                    <th>Set</th>
+                                    <th>1</th>
+                                    <th>2</th>
+                                    <th>3</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>球員 A</td>
+                                    <td><i class="fas fa-caret-left"></i></td>
+                                    <td id="game-player-a">0</td>
+                                    <td id="set-player-a">0</td>
+                                    <td id="set1-player-a">0</td>
+                                    <td id="set2-player-a">0</td>
+                                    <td id="set3-player-a">0</td>
+                                </tr>
+                                <tr>
+                                    <td>球員 B</td>
+                                    <td></td>
+                                    <td id="game-player-b">0</td>
+                                    <td id="set-player-b">0</td>
+                                    <td id="set1-player-b">0</td>
+                                    <td id="set2-player-b">0</td>
+                                    <td id="set3-player-b">0</td>
+                                </tr>
+                            </tbody>
+
+                        </table>
+                    </div>
+
+                    <div class="score-btn">
+                        <button id="btn-player-a">球員A得分</button>
+                        <button id="btn-player-b">球員B得分</button>
+                        <button id="btn-player-reset">重設</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- section3: set -->
+        <section id="set">
+            <div class="wrap-fluid-bg">
+                <div class="wrap-side">
+                    <h3>盤 set</h3>
+                    <p>盤的計算有多種，基本上，率先獲得<strong> 6 局 </strong>並領先對手至少 2 局的運動員贏得該盤；若其中一方贏得 6 局卻未領先至少 2
+                        局，則該盤必須繼續，直到一方領先 2
+                        局為止。
+                    </p>
+                    <p>最常見的是<strong>「領先盤」(advantage set）</strong>和<strong>「決勝盤」(tie-break set) </strong>兩種。</p>
+
+                    <div class="sub-title">
+                        <h4>領先盤 advantage set</h4>
+                        <p>即 long game，首先贏得 6 局或 5 平後領先差距 2 局為止。
+                            這種計分方式在職業賽中時，常僅出現於最後一盤（五盤三勝比賽中之第五盤，或三盤兩勝比賽中之第三盤）。
+                        </p>
+                    </div>
+
+                    <div class="sub-title">
+                        <h4>決勝局／盤 tie-break set</h4>
+                        <p>另一常見的記分方法是，當雙方在一盤中戰至 6 比 6 時，會舉行一局特殊的「決勝局」，又稱「搶七」。贏得此決勝局的運動員就以總局數 7 比 6 贏得該盤。
+                        </p>
+                        <p>在搶七中，首先獲得 7 分且淨勝 2 分以上的運動員贏得該盤比賽。由於在決勝局中雙方交替發球，無論哪一方獲勝該局均不會被記入保發/破發局。
+                            決勝局以 0,1,2,3... 呼叫，且比分後面呼叫領先者姓氏，首先贏得 7 分並有 2 分差距即贏得該局及盤。
+                        </p>
+                    </div>
+
+                    <table class="table-blue-head table-striped-orange tie-break-score">
+                        <thead>
+                            <tr>
+                                <th>搶七比分範例</th>
+                                <th>分數呼叫</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1-0</td>
+                                <td>one-zero</td>
+                            </tr>
+                            <tr>
+                                <td>4-3</td>
+                                <td>four-three</td>
+                            </tr>
+                            <tr>
+                                <td>4-4</td>
+                                <td>four-all</td>
+                            </tr>
+                            <tr>
+                                <td>3-7</td>
+                                <td>set</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p>決勝局開始時的發球權歸上一局比賽的接球手，該名運動員在自己的右邊發球區發球，然後將發球權交給對手。接下來雙方在每兩次發球後便交換發球權。
+                        每名選手在其每兩次發球中，先在左邊發球區發球，再在右邊發球區發球。每次比數總和達至6的倍數後，
+                        (e.g. when the score is 4-2)，雙方須交換場地。決勝局完結後，雙方亦須交換場地，因為決勝局必定是單數局 7-6（一盤中的第13局）。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- section4: match -->
+        <section id="match">
+            <div class="wrap-fluid-bg">
+                <div class="wrap-side">
+                    <h3>場 match</h3>
+                    <p>大多數比賽為 3 盤 2 勝制，採決賽局／盤制（tie-break set），先贏得 2 盤即贏得比賽；大滿貫男子單打比賽為 5 盤 3 勝制。</p>
+                    <div class="sub-title">
+                        <h4>大滿貫賽制</h4>
+                        <p>從2019開始，目前四大滿貫決勝盤（final set）賽制如下：</p>
+                        <li>澳網：先贏 6 局者獲勝，如果雙方打到 5-5 的情況下，先贏 7 局者獲勝；如果雙方打到6-6 平局時進行搶十大戰。</li>
+                        <li>法網：領先盤（advantage set）決勝。</li>
+                        <li>溫網：先贏 12 局者獲勝，如果雙方打到 11-11 的情況下，先贏13局者獲勝；如果雙方打到 12-12 平局時進行搶七大戰。</li>
+                        <li>美網：與常規盤一樣，搶七決勝。</li>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="../assets/js/section_3-2.js"></script>
+</body>
+
+</html>

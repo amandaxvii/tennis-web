@@ -169,8 +169,10 @@ footer {
         z-index: -2;
     }
 
-    .nav-menu li a {
+    .nav-menu>li>a {
         text-align: center;
+        color: #4a746a;
+        font-weight: 500;
     }
 
     .nav-menu li+li {

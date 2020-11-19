@@ -1,6 +1,7 @@
 /* 共同設定 */
+h2,
 h3,
-h2 {
+h4 {
     text-align: center;
 }
 
@@ -113,9 +114,37 @@ td {
 }
 
 /* section 2-2 tournament content */
-.tournament-section {
-    display: flex;
-    flex-direction: column;
+.title-post {
+    margin-bottom: 3.5rem;
+}
+
+.title-post p {
+    text-align: center;
+}
+
+.title-post li>a:hover {
+    color: #d66c44;
+}
+
+.wrap-fluid-bg {
+    padding: 3.5rem 0;
+}
+
+.wrap-fluid-bg:nth-child(even) {
+    background: #eee;
+}
+
+.tournament-section h4 {
+    padding-bottom: 1rem;
+}
+
+.tournament-section i {
+    padding-right: 1rem;
+}
+
+.tournament-section p {
+    margin-bottom: 1.4rem;
+    letter-spacing: 0.05rem;
 }
 
 .tournament-section .item {
@@ -129,15 +158,23 @@ td {
     color: #fefcfd;
 }
 
-/* 設定與頁面寬度距離，水平置中 */
 .tournament-wrap {
-    padding: 18px 30px 0;
+    padding: 1rem 0;
     margin: 0 auto;
 }
 
 .tournament-table th,
 td {
     text-align: center;
+}
+
+.tournament-table a {
+    color: #fefcfd;
+}
+
+
+.tournament-table small {
+    color: #aaa;
 }
 
 .tournament-table th {
@@ -161,9 +198,15 @@ td {
     padding-bottom: 10px;
 }
 
+.tournament-table tr a:hover {
+    color: #d66c44;
+}
+
 .tournament-table tr td:hover {
     background-color: #d66c44;
 }
+
+
 
 /* 手機螢幕 */
 @media screen and (max-width: 767px) {

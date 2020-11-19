@@ -1,9 +1,13 @@
+const singlesBtn = document.querySelector('.singles-btn')
+const doublesBtn = document.querySelector('.doubles-btn')
+const resetBtn = document.querySelector('#reset-btn')
 const glossaryForm = document.querySelector('.court-glossary-select')
 const courtAreaSelect = document.querySelector('#court-area')
 const courtLineSelect = document.querySelector('#court-line')
 const glossarySelect = document.querySelector('.glossary-select')
 const glossaryButtonArea = document.querySelector('.glossary-area-btn')
 const glossaryButtonLine = document.querySelector('.glossary-line-btn')
+
 
 function courtAreaSelected() {
     // selectedIndex 為你所選中的選項index
@@ -162,6 +166,115 @@ function courtLineFunction() {
     courtLineSelected()
     definitionLineDisplay()
 }
+
+function singlesCourtSelected(){
+    const singlesCourt = document.querySelectorAll('.singles-court')
+
+        // 加上判斷式，在同樣的 option 下，再點一下 button，會有 toggle 效果
+  for (let i = 0; i < singlesCourt.length; i++){
+        console.log(singlesCourt[i])
+        if (singlesCourt[i].classList.contains('active')) {
+           singlesCourt[i].classList.remove('active')
+         
+        } else {
+            singlesCourt[i].classList.add('active')
+        }
+}
+}
+
+function doublesCourtSelected(){
+   
+    const doublesCourt = document.querySelectorAll('.doubles-court')
+
+        // 加上判斷式，在同樣的 option 下，再點一下 button，會有 toggle 效果
+  for (let i = 0; i < doublesCourt.length ; i++){
+      console.log(i)
+        if (doublesCourt[i].classList.contains('active')) {
+           doublesCourt[i].classList.remove('active')
+            console.log('active to non-active')
+        } else {
+            doublesCourt[i].classList.add('active')
+            console.log('non-active to active')
+        }
+}
+}
+
+function resetFunction(){
+    const singlesCourt = document.querySelectorAll('.singles-court')
+    const doublesCourt = document.querySelectorAll('.doubles-court')
+    for (let i = 0; i < singlesCourt.length; i++){
+        if (singlesCourt[i].classList.contains('active')) {
+           singlesCourt[i].classList.remove('active')
+            console.log('active to non-active')
+        } 
+    }
+          for (let i = 0; i < doublesCourt.length ; i++){
+        if (doublesCourt[i].classList.contains('active')) {
+           doublesCourt[i].classList.remove('active')
+            console.log('active to non-active')
+        }
+    }
+
+}
+
+function resetSelected(){
+       const activeClass = document.querySelectorAll('.active')
+       console.log(activeClass)
+    for (let i = 0; i < activeClass.length; i++){
+        if (activeClass[i].classList.contains('active')){
+            activeClass[i].classList.remove('active')
+        }
+    }
+
+    
+    const lineActive = document.querySelectorAll('.line-active')
+    console.log(lineActive)
+    for (let i = 0; i < lineActive.length; i++){
+        if (lineActive[i].classList.contains('line-active')){
+            lineActive[i].classList.remove('line-active')
+        } 
+    }
+
+    const areaDefinition = document.querySelectorAll('.court-area-definition')
+      const lineDefinition = document.querySelectorAll('.court-line-definition')
+    console.log(areaDefinition)
+    console.log(lineDefinition)
+  
+    for (let i = 0; i < areaDefinition.length; i++){
+        if ((areaDefinition[i].classList.contains('definition-active')) && (areaDefinition[i].style.display = 'block')){
+            console.log(areaDefinition[i])
+            areaDefinition[i].classList.remove('definition-active')
+              areaDefinition[i].style.display = 'none'
+        } }
+
+         for (let i = 0; i < lineDefinition.length; i++){
+        if ((lineDefinition[i].classList.contains('definition-active')) && (lineDefinition[i].style.display = 'block')){
+            console.log(lineDefinition[i])
+            lineDefinition[i].classList.remove('definition-active')
+              lineDefinition[i].style.display = 'none'
+        } }
+
+}
+
+function doublesCourtFunction(){
+    resetFunction()
+    singlesCourtSelected()
+    doublesCourtSelected()
+}
+
+function singlesCourtFunction(){
+    resetFunction()
+    singlesCourtSelected()
+}
+
+function resetAll(){
+    resetFunction()
+    resetSelected()
+}
+
+singlesBtn.addEventListener('click', singlesCourtFunction)
+doublesBtn.addEventListener('click', doublesCourtFunction)
+resetBtn.addEventListener('click', resetAll)
 
 glossaryButtonArea.addEventListener('click', courtAreaFunction)
 glossaryButtonLine.addEventListener('click', courtLineFunction)

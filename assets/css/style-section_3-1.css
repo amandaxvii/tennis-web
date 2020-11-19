@@ -2,13 +2,8 @@
     width: 100%;
 }
 
-.court-layout div {
-    /* z-index: -2; */
-}
-
 .court-group {
-    margin: 10rem auto;
-    width: 85%;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -16,9 +11,8 @@
     position: relative;
 }
 
+/* 球場圖 */
 .outside-space {
-    width: 80%;
-    height: 30vh;
     background: #324856;
     display: flex;
     justify-content: center;
@@ -169,6 +163,30 @@
     margin-bottom: 15px;
 }
 
+.glossary-btn {
+    width: 20%;
+    padding: 5px;
+    background: #D66c44;
+    color: #fff;
+    border-color: #d66c44;
+    border-radius: 2px;
+}
+
+.court-btn {
+    padding: 10px 0;
+}
+
+.court-btn .singles-btn,
+.doubles-btn {
+    width: 90px;
+}
+
+#reset-btn {
+    margin-left: 1.5rem;
+    background: #4a756a;
+    border-color: #4a756a;
+}
+
 .court-glossary-select {
     margin: 10px auto;
     display: flex;
@@ -186,25 +204,6 @@
     width: 70%;
 }
 
-.court-glossary-select .glossary-btn {
-    width: 20%;
-    padding: 5px;
-    background: #D66c44;
-    color: #fff;
-    border-color: #d66c44;
-    border-radius: 2px;
-}
-
-/* .court-btn {
-    display: flex;
-    flex-direction: column;
-    width: 15%;
-    margin: 0 30px;
-}
-
-.court-btn button {
-    margin: 5px 0 10px;
-} */
 
 .active {
     background: #d18237;
@@ -238,14 +237,13 @@
 
 /* 手機螢幕 */
 @media screen and (max-width: 767px) {
-
-    .outside-space {
-        width: 300px;
-        height: 150px;
+    .breadcrumbs {
+        display: none;
     }
 
-    .court-group {
-        margin: 10rem auto;
+    .outside-space {
+        min-width: 300px;
+        height: 150px;
     }
 
     .court-glossary-select label {
@@ -257,6 +255,9 @@
 
 /* 平板螢幕 - 直式 */
 @media screen and (min-width: 768px) {
+
+
+
     .court-group {
         margin: 13rem auto;
     }
