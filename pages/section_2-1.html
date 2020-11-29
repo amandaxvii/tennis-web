@@ -23,35 +23,36 @@
     <!-- 控制 label checkbox -->
     <input type="checkbox" name="" id="menu-control">
 
-    <!-- navigation  -->
+    <!-- navigation fixed -->
     <header class="header">
         <div class="header-content">
-            <a href="../index.html" class="home-icon">
-                <i class="fas fa-home "></i>
-            </a>
+            <div class="header-logo">
+                <a href="../index.html" class="home-icon">
+                    <i class="fas fa-home "></i>
+                </a>
 
-            <!-- 漢堡選單 -->
-            <label for="menu-control">
-                <div class="header-rwd-icon">
-                    <i class="fas fa-bars "></i>
-                    <i class="fas fa-times"></i>
-                </div>
-            </label>
+                <!-- 漢堡選單 -->
+                <label for="menu-control">
+                    <div class="header-rwd-icon">
+                        <i class="fas fa-bars"></i>
+                        <i class="fas fa-times"></i>
+                    </div>
+                </label>
+            </div>
 
-            <nav>
+            <nav class="header-nav">
                 <ul class="nav-menu">
-                    <li>
-                        <a href="section_1.html">組織介紹</a>
-                        <i class="fas fa-angle-down"></i>
+                    <li class="dropdown">
+                        <button class="accordion">組織介紹<i class="fas fa-chevron-circle-down"></i></button>
+
                         <ul class="nav-submenu">
                             <li><a href="section_1-1.html">ITF</a></li>
                             <li><a href="section_1-2.html">ATP</a></li>
                             <li><a href="section_1-3.html">WTA</a></li>
                         </ul>
                     </li>
-                    <li>
-                        <a href="">重點賽事</a>
-                        <i class="fas fa-angle-down"></i>
+                    <li class="dropdown">
+                        <button class="accordion">重點賽事<i class="fas fa-chevron-circle-down"></i></button>
                         <ul class="nav-submenu">
                             <li><a href="section_2-1.html">賽事積分列表</a></li>
                             <li><a href="section_2-2.html">大滿貫</a></li>
@@ -59,13 +60,11 @@
                             <li><a href="section_2-4.html">WTA 巡迴賽</a></li>
                         </ul>
                     </li>
-                    <li>
-                        <a href="">比賽規則</a>
-                        <i class="fas fa-angle-down"></i>
+                    <li class="dropdown">
+                        <button class="accordion">比賽規則<i class="fas fa-chevron-circle-down"></i></button>
                         <ul class="nav-submenu">
                             <li><a href="section_3-1.html">球場</a></li>
                             <li><a href="section_3-2.html">計分系統</a></li>
-                            <li><a href="">人員</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -86,9 +85,326 @@
             </ul>
         </div>
 
-        <div class="tournament-card-wrap">
-            <h2>職業網球賽事列表</h2>
-            <div class="tournament-card">
+        <div class="tournament-card-wrap wrap-side wrap-large">
+            <section class="tour">
+                <h2>有幾大類賽事？</h2>
+                <article class="read-area">
+                    <p>可以將網球所有賽事簡易區分為以下三大類，最耳熟能響也是規模最大的是<strong>「大滿貫系列賽」</strong>，其次是職業選手主要賺取績分的<strong>「職業巡迴賽」</strong>，最後是<strong>「國際型團體比賽」</strong>，大致是以國家隊作為比賽單位的賽事，有些賽事是無績分。
+                    </p>
+                </article>
+
+                <div class="accordion-group">
+                    <div class="accordion-list">
+                        <button class="accordion-btn">大滿貫 Grand Slams</button>
+                        <div class="accordion-item">
+                            <h4>男女混合 Mix</h4>
+                            <ul>
+                                <li>澳洲網球公開賽 <small>Australian Open</small></li>
+                                <li>法國網球公開賽 <small>Roland-Garros</small></li>
+                                <li>溫布頓 <small>Wimbledon Championship</small></li>
+                                <li>美國網球公開賽 <small>US Open</small></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="accordion-list">
+                        <button class="accordion-btn">職業巡迴賽
+                            Professional tours</button>
+                        <div class="accordion-item">
+                            <h4>男子 Men</h4>
+                            <ul>
+                                <li>ATP 世界巡迴賽 <small>ATP Tour</small></li>
+                                <li>ATP 挑戰賽 <small>ATP Challenger Tour</small></li>
+                                <li>ITF 男子巡迴賽 <small>ITF Men's Circuit</small></li>
+                            </ul>
+                            <h4>女子 Women</h4>
+                            <ul>
+                                <li>WTA 巡迴賽 <small>WTA Tour</small></li>
+                                <li>WTA 挑戰賽 <small>WTA 125K series</small></li>
+                                <li>ITF 女子巡迴賽 <small>ITF Women's Circuit</small></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="accordion-list">
+                        <button class="accordion-btn">國際團體比賽 Team tennis</button>
+                        <div class="accordion-item">
+                            <h4>男女混合 Mix</h4>
+                            <ul>
+                                <li>霍普曼盃 <small>Hopman Cup</small></li>
+                            </ul>
+                            <h4>男子 Men</h4>
+                            <ul>
+                                <li>台維斯盃 <small>Davis Cup</small></li>
+                                <li>拉沃杯 <small>Laver Cup</small></li>
+                            </ul>
+                            <h4>女子 Women</h4>
+                            <ul>
+                                <li>聯邦盃 <small>Fed Cup</small></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="wrap-side wrap-large">
+            <section class="point">
+                <h2>如何看球員排名與賽事績分？</h2>
+
+                <h3>先了解排名系統</h3>
+                <div class="ranking-card-group">
+                    <div class="ranking-card">
+                        <h4>ATP 排名 <small>ATP Rankings</small></h4>
+                        <p>ATP 排名是職業網球聯合會用來決定賽事中單打和雙打球員的參賽資格及種子順序，賽事績分會根據選手們在各個賽事中的成績來計算。ATP 排名統計週期為 52
+                            周（但不包括ATP世界巡迴賽總決賽），並於每週一更新一次，同時這些積分將在賽季末的最後一項賽事結束後全部重來。</p>
+                    </div>
+
+                    <div class="ranking-card">
+                        <h4>WTA 排名 <small>WTA Rankings</small></h4>
+                        <p>WTA 排名是女子網球聯合會根據選手們在各個賽事中的成績計算出積分，單打排名取前 16 項賽事最高的績分成績來計算，雙打排名取前 11 項賽事，統計週期為 52
+                            週，並每週公布一次世界排名。上述的賽事要包含四大滿貫、四個義務賽事與年終賽的成績，排名前20的選手，還要將 Premier 5 賽事裡最好的兩個成績納入計算。</p>
+                    </div>
+                </div>
+
+                <h3>再看各賽事績分</h3>
+                <article class="read-area">
+                    <p>基本上選手青少年時期會從最低層級賽事的 <strong>ITF 巡迴賽</strong>開始比賽，接著往第二層級的 <strong>ATP 挑戰賽／WTA
+                            挑戰賽</strong>，再邁向最高層級的
+                        <strong>ATP 世界巡迴賽／WTA
+                            世界巡迴賽</strong>，最終則是績分最高的<strong>大滿貫系列賽</strong>。
+                    </p>
+                    <p> 選手需在 ATP 挑戰賽贏得足夠的積分後，才能參加ATP世界巡迴賽參賽資格的抽籤。另外常聽到的 ATP Finals / WTA Finals 是 ATP / WTA
+                        世界巡迴賽在每年年底舉行的最後一場賽事，績分僅次大滿貫賽事，大規則是由當年排名前八的選手參賽，因此比賽結果不影響當年的世界排名。</p>
+                </article>
+                <div class="level-chart-group">
+                    <!-- Men's -->
+                    <div class="level-chart">
+                        <ul class="level-list">
+                            <li>男子職業賽事</li>
+                            <li class="level-1-color"><button>大滿貫 <small>Grand slam</small></button></li>
+                            <li class="level-2-color"><button>ATP 年終賽 <small>ATP Finals</small></button></li>
+                            <li class="level-3-color">
+                                <button class="level-btn">ATP 世界巡迴賽 <small>ATP tour</small></button>
+                                <div class="level-sub-item">
+                                    <ul>
+                                        <li>1000系列大師賽 <small>Masters 1000</small></li>
+                                        <li>500系列賽 <small>500 Series</small></li>
+                                        <li>250系列賽 <small>250 Series</small></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="level-4-color">
+                                <button class="level-btn"> ATP 挑戰賽 <small>ATP challenger tour</small></button>
+                                <div class="level-sub-item">
+                                    <ul>
+                                        <li>挑戰賽績分在 80 到 125 之間</li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li class="level-5-color"><button class="level-btn">ITF 男子巡迴賽 <small>ITF men's
+                                        circuit</small></button>
+                                <div class="level-sub-item">
+                                    <ul>
+                                        <li>低層級比賽，績分為 10 或 20</li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Women's -->
+                    <div class="level-chart">
+                        <ul class="level-list">
+                            <li>女子職業賽事</li>
+                            <li class="level-1-color"><button>大滿貫 <small>Grand slam</small></button></li>
+                            <li class="level-2-color"><button>WTA 年終賽 <small>WTA Finals</small></button></li>
+                            <li class="level-3-color">
+                                <button class="level-btn">WTA 超級巡迴賽 <small>Premier tournaments</small></button>
+                                <div class="level-sub-item">
+                                    <ul>
+                                        <li>WTA 義務賽 <small>Premier Mandatory</small></li>
+                                        <li>WTA 超五賽 <small>Premier Five</small></li>
+                                        <li>WTA 超級賽 <small>Premier</small></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="level-4-color">
+                                <button class="level-btn"> WTA 國際賽 <small>International tournaments</small></button>
+                                <div class="level-sub-item">
+                                    <ul>
+                                        <li>積分 280 的賽事</li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li class="level-5-color"><button class="level-btn">WTA 挑戰賽 <small>125k
+                                        Series</small></button>
+                                <div class="level-sub-item">
+                                    <ul>
+                                        <li>積分 160 的賽事</li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="level-5-color"><button class="level-btn">ITF 女子巡迴賽 <small>ITF women's
+                                        circuit</small></button>
+                                <div class="level-sub-item">
+                                    <ul>
+                                        <li>低層級比賽，績分在 12 到 150 之間</li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <p>WTA 賽事中文為暫譯</p>
+
+                <h3>網球賽事積分列表</h3>
+                <article class="read-area">
+                    <p>績分多寡與重要度直接影響到比賽的精彩程度，因此由觀眾的角度來看，會先收看的比賽以大滿貫為最多，其次男子職業賽的話，以男子年終賽 ATP Finals 與 1000
+                        系列大師賽最受歡迎；女子職業賽的話，以女子年終賽
+                        WTA Finals
+                        、四大義務賽和超級賽受到注目。</p>
+                </article>
+
+                <!-- 績分列表 -->
+                <div class="points-wrap">
+                    <!-- 男子績分 -->
+                    <div class="responsive-table">
+                        <table class="points-table">
+                            <h3>ATP 男子積分</h3>
+                            <thead>
+                                <tr>
+                                    <th>賽事類別</th>
+                                    <th>賽事數量</th>
+                                    <th>冠軍所獲積分</th>
+                                    <th>主辦機構</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>四大滿貫</td>
+                                    <td>4</td>
+                                    <td>2000</td>
+                                    <td>ITF</td>
+                                </tr>
+                                <tr>
+                                    <td>ATP 年終賽</td>
+                                    <td>1</td>
+                                    <td>1500</td>
+                                    <td>ATP</td>
+                                </tr>
+                                <tr>
+                                    <td>1000 系列大師賽</td>
+                                    <td>9</td>
+                                    <td>1000</td>
+                                    <td>ATP</td>
+                                </tr>
+                                <tr>
+                                    <td>500 系列賽</td>
+                                    <td>13</td>
+                                    <td>500</td>
+                                    <td>ATP</td>
+                                </tr>
+                                <tr>
+                                    <td>250 系列賽</td>
+                                    <td>39</td>
+                                    <td>250</td>
+                                    <td>ATP</td>
+                                </tr>
+                                <tr>
+                                    <td>ATP 挑戰賽</td>
+                                    <td>178</td>
+                                    <td>80-125</td>
+                                    <td>ATP</td>
+                                </tr>
+                                <tr>
+                                    <td>ITF 男子巡迴賽</td>
+                                    <td>534</td>
+                                    <td>10-20</td>
+                                    <td>ITF</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- 女子績分 -->
+                    <div class="responsive-table">
+                        <table class="points-table">
+                            <h3>WTA 女子積分</h3>
+                            <thead>
+                                <tr>
+                                    <th>賽事類別</th>
+                                    <th>賽事數量</th>
+                                    <th>冠軍所獲積分</th>
+                                    <th>主辦機構</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>四大滿貫</td>
+                                    <td>4</td>
+                                    <td>2000</td>
+                                    <td>ITF</td>
+                                </tr>
+                                <tr>
+                                    <td>WTA 年終賽</td>
+                                    <td>1</td>
+                                    <td>1500</td>
+                                    <td>WTA</td>
+                                </tr>
+                                <tr>
+                                    <td>義務賽</td>
+                                    <td>4</td>
+                                    <td>1000</td>
+                                    <td>WTA</td>
+                                </tr>
+                                <tr>
+                                    <td>超五賽</td>
+                                    <td>5</td>
+                                    <td>900</td>
+                                    <td>WTA</td>
+                                </tr>
+                                <tr>
+                                    <td>超級賽</td>
+                                    <td>12</td>
+                                    <td>470</td>
+                                    <td>WTA</td>
+                                </tr>
+                                <tr>
+                                    <td>國際賽</td>
+                                    <td>178</td>
+                                    <td>280</td>
+                                    <td>WTA</td>
+                                </tr>
+                                <tr>
+                                    <td>WTA 挑戰賽</td>
+                                    <td>10*</td>
+                                    <td>160</td>
+                                    <td>WTA</td>
+                                </tr>
+                                <tr>
+                                    <td>ITF 女子巡迴賽</td>
+                                    <td>約 500</td>
+                                    <td>12-150</td>
+                                    <td>ITF</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p>* WTA 挑戰賽，每年的賽事場次會有變動</p>
+                </div>
+
+            </section>
+        </div>
+
+    </div>
+    <!-- 男子賽事 -->
+    <!-- <div class="tournament-card">
                 <h3>男子職業網球賽事</h3>
 
                 <p><i class="far fa-calendar"></i>四大滿貫</p>
@@ -99,7 +415,7 @@
                     <li>美國網球公開賽</li>
                 </ul>
 
-                <p><i class="far fa-calendar"></i>ATP 世界巡迴賽</p>
+                <h4><i class="far fa-calendar"></i>ATP 世界巡迴賽</h4>
                 <ul>
                     <li>ATP世界巡迴賽總決賽</li>
                     <li>1000系列大師賽</li>
@@ -120,8 +436,10 @@
                     <li>奧運會網球賽事</li>
                 </ul>
 
-            </div>
-            <div class="tournament-card">
+            </div> -->
+
+    <!-- 女子賽事 -->
+    <!-- <div class="tournament-card">
                 <h3>女子職業網球賽事</h3>
                 <p><i class="far fa-calendar"></i>四大滿貫</p>
                 <ul>
@@ -150,141 +468,17 @@
                     <li>霍普曼盃</li>
                     <li>奧運會網球賽事</li>
                 </ul>
-            </div>
-        </div>
-
-        <div class="points-wrap">
-            <h2>網球賽事積分列表</h2>
-
-            <div class="responsive-table">
-                <table class="points-table">
-                    <h3>ATP 男子積分</h3>
-                    <thead>
-                        <tr>
-                            <th>賽事類別</th>
-                            <th>賽事數量</th>
-                            <th>冠軍所獲積分</th>
-                            <th>主辦機構</th>
-                        </tr>
-                    </thead>
-
-                    <tbody>
-                        <tr>
-                            <td>四大滿貫</td>
-                            <td>4</td>
-                            <td>2000</td>
-                            <td>ITF</td>
-                        </tr>
-                        <tr>
-                            <td>ATP世界巡迴賽總決賽</td>
-                            <td>1</td>
-                            <td>1100–1500</td>
-                            <td>ATP</td>
-                        </tr>
-                        <tr>
-                            <td>1000系列大師賽</td>
-                            <td>9</td>
-                            <td>1000</td>
-                            <td>ATP</td>
-                        </tr>
-                        <tr>
-                            <td>500系列賽</td>
-                            <td>13</td>
-                            <td>500</td>
-                            <td>ATP</td>
-                        </tr>
-                        <tr>
-                            <td>250系列賽</td>
-                            <td>39</td>
-                            <td>250</td>
-                            <td>ATP</td>
-                        </tr>
-                        <tr>
-                            <td>ATP挑戰賽</td>
-                            <td>178</td>
-                            <td>80-125</td>
-                            <td>ATP</td>
-                        </tr>
-                        <tr>
-                            <td>ITF男子巡迴賽</td>
-                            <td>534</td>
-                            <td>18-35</td>
-                            <td>ITF</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="responsive-table">
-                <table class="points-table">
-                    <h3>WTA 女子積分</h3>
-                    <thead>
-                        <tr>
-                            <th>賽事類別</th>
-                            <th>賽事數量</th>
-                            <th>冠軍所獲積分</th>
-                            <th>主辦機構</th>
-                        </tr>
-                    </thead>
-
-                    <tbody>
-                        <tr>
-                            <td>四大滿貫</td>
-                            <td>4</td>
-                            <td>2000</td>
-                            <td>ITF</td>
-                        </tr>
-                        <tr>
-                            <td>年終錦標賽</td>
-                            <td>1</td>
-                            <td>1500</td>
-                            <td>WTA</td>
-                        </tr>
-                        <tr>
-                            <td>皇冠賽</td>
-                            <td>4</td>
-                            <td>1000</td>
-                            <td>WTA</td>
-                        </tr>
-                        <tr>
-                            <td>超五賽</td>
-                            <td>5</td>
-                            <td>900</td>
-                            <td>WTA</td>
-                        </tr>
-                        <tr>
-                            <td>常規頂級賽</td>
-                            <td>12</td>
-                            <td>470</td>
-                            <td>WTA</td>
-                        </tr>
-                        <tr>
-                            <td>國際巡迴賽</td>
-                            <td>178</td>
-                            <td>32</td>
-                            <td>WTA</td>
-                        </tr>
-                        <tr>
-                            <td>WTA 挑戰賽</td>
-                            <td>10*</td>
-                            <td>160</td>
-                            <td>WTA</td>
-                        </tr>
-                        <tr>
-                            <td>ITF女子巡迴賽</td>
-                            <td>約500</td>
-                            <td>12-150</td>
-                            <td>ITF</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <p>* WTA 挑戰賽，每年的賽事場次會有變動</p>
-        </div>
+            </div> -->
 
 
-    </div>
 
+
+
+
+
+
+    <script src="../assets/js/section-navigation.js"></script>
+    <script src="../assets/js/section_2.js"></script>
 </body>
 
 </html>

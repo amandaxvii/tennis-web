@@ -25,35 +25,36 @@
     <!-- 控制 label checkbox -->
     <input type="checkbox" name="" id="menu-control">
 
-    <!-- navigation  -->
+    <!-- navigation fixed -->
     <header class="header">
         <div class="header-content">
-            <a href="../index.html" class="home-icon">
-                <i class="fas fa-home "></i>
-            </a>
+            <div class="header-logo">
+                <a href="../index.html" class="home-icon">
+                    <i class="fas fa-home "></i>
+                </a>
 
-            <!-- 漢堡選單 -->
-            <label for="menu-control">
-                <div class="header-rwd-icon">
-                    <i class="fas fa-bars "></i>
-                    <i class="fas fa-times"></i>
-                </div>
-            </label>
+                <!-- 漢堡選單 -->
+                <label for="menu-control">
+                    <div class="header-rwd-icon">
+                        <i class="fas fa-bars"></i>
+                        <i class="fas fa-times"></i>
+                    </div>
+                </label>
+            </div>
 
-            <nav>
+            <nav class="header-nav">
                 <ul class="nav-menu">
-                    <li>
-                        <a href="section_1.html">組織介紹</a>
-                        <i class="fas fa-angle-down"></i>
+                    <li class="dropdown">
+                        <button class="accordion">組織介紹<i class="fas fa-chevron-circle-down"></i></button>
+
                         <ul class="nav-submenu">
                             <li><a href="section_1-1.html">ITF</a></li>
                             <li><a href="section_1-2.html">ATP</a></li>
                             <li><a href="section_1-3.html">WTA</a></li>
                         </ul>
                     </li>
-                    <li>
-                        <a href="">重點賽事</a>
-                        <i class="fas fa-angle-down"></i>
+                    <li class="dropdown">
+                        <button class="accordion">重點賽事<i class="fas fa-chevron-circle-down"></i></button>
                         <ul class="nav-submenu">
                             <li><a href="section_2-1.html">賽事積分列表</a></li>
                             <li><a href="section_2-2.html">大滿貫</a></li>
@@ -61,13 +62,11 @@
                             <li><a href="section_2-4.html">WTA 巡迴賽</a></li>
                         </ul>
                     </li>
-                    <li>
-                        <a href="">比賽規則</a>
-                        <i class="fas fa-angle-down"></i>
+                    <li class="dropdown">
+                        <button class="accordion">比賽規則<i class="fas fa-chevron-circle-down"></i></button>
                         <ul class="nav-submenu">
                             <li><a href="section_3-1.html">球場</a></li>
                             <li><a href="section_3-2.html">計分系統</a></li>
-                            <li><a href="">人員</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -78,9 +77,9 @@
     <!-- contents -->
     <div class="wrap-top">
         <section>
-            <div class="wrap-side">
+            <div class="wrap-side read-area">
                 <div class="title">
-                    <h1>組織介紹</h1>
+                    <h2>組織介紹</h2>
                     <p>職業網球事務與比賽主要由三大組織一起維護運作，三大組織為：ITF ( 國際網球總會 )、ATP ( 職業網球聯合會 )、WTA ( 國際女子網球協會 )。</p>
                 </div>
 
@@ -92,11 +91,13 @@
                         <li><a href="section_1-3.html">WTA</a></li>
                     </ul>
                 </div>
+
                 <div class="article">
-                    <h2>ITF</h2>
+                    <h3>ITF</h3>
                     <p>
-                        國際網球總會（英語：International Tennis
-                        Federation，縮寫：ITF）又稱國際網球聯合會，簡稱國際網總或國際網聯，是一個管理網球運動比賽的國際體育組織，由205個協會組成。
+                        <strong>國際網球總會（英語：International Tennis
+                            Federation，縮寫：ITF)</strong>
+                        又稱國際網球聯合會，簡稱國際網總或國際網聯，是一個管理網球運動比賽的國際體育組織，由205個協會組成。
                     </p>
                     <p>
                         ITF成立於於1913年，是這三個機構中最早成立的。他的主要職責包括以下五點：
@@ -112,7 +113,7 @@
                 </div>
                 <div class="article-card-wrap">
                     <div class="article-card">
-                        <h3>主辨賽事：</h3>
+                        <h4>主辨賽事</h4>
                         <p>
                             國際網球總會主辦三項國際團體比賽，分別為男子團體的<a href="https://www.daviscup.com/en/home.aspx"
                                 target="_blank">台維斯盃</a>、女子團體的<a href="https://www.billiejeankingcup.com/en/home.aspx"
@@ -122,7 +123,7 @@
                     </div>
 
                     <div class="article-card">
-                        <h3>認可賽事：</h3>
+                        <h4>認可賽事</h4>
                         <p>總會也認可了網球四大滿貫賽事：<a href="http://www.australianopen.com/" target="_blank"
                                 rel="noopener noreferrer">澳大利亞網球公開賽</a>、<a href="https://www.rolandgarros.com/en-us/"
                                 target="_blank" rel="noopener noreferrer">法國網球公開賽</a>、<a
@@ -134,6 +135,8 @@
             </div>
         </section>
     </div>
+
+    <script src="../assets/js/section-navigation.js"></script>
 </body>
 
 </html>

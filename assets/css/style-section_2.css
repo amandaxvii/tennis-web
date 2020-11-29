@@ -1,8 +1,7 @@
 /* 共同設定 */
-h2,
-h3,
-h4 {
-    text-align: center;
+
+.breadcrumbs {
+    display: none;
 }
 
 table {
@@ -20,63 +19,241 @@ td {
     color: #444;
 }
 
-.responsive-table {
-    /* Responsive Tables */
-    overflow-x: auto;
-}
-
-/* 用來設定與 fixed header 的距離 */
-.wrap-top {
-    padding: 90px 0 0;
-}
-
-.wrap-side {
-    padding: 0 30px;
+section.tour {
+    border-bottom: 1px solid #324856;
+    border-bottom-style: dashed;
+    margin: 0 auto;
+    padding-bottom: 40px;
 }
 
 /* section 2-1 */
-.tournament-card-wrap {
+section.point {
+    padding-top: 35px;
+}
+
+/* .tournament-card-wrap {
     margin: 0 auto;
     display: flex;
     justify-content: center;
-    padding: 0 30px;
+} */
+
+/* accordion 樣式 */
+.accordion-group {
+    width: 100%;
 }
 
-.tournament-card {
-    width: 45%;
-    border: 1px solid #888;
-    border-radius: 5px;
-    padding: 6px 20px;
-    margin-bottom: 1.5rem;
+.accordion-list {
+    max-width: 495px;
+    margin: 0 auto;
+    overflow: hidden;
+    margin-bottom: 5px;
 }
 
-.tournament-card h3 {
+.accordion-list .accordion-btn {
+    width: 100%;
+    background: #324856;
+    color: #d66c44;
+    color: #fefcfd;
+    padding: 10px 22px;
+    font-size: 1.6rem;
+    font-weight: 500;
+    border-radius: 8px 8px 8px 8px;
+    cursor: pointer;
+    text-align: left;
+    transition: all ease 0.4s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accordion-list .accordion-btn:after {
+    content: "\002B";
+    font-size: 2.2rem;
+}
+
+.accordion-list .accordion-btn:hover,
+.accordion-list .accordion-active {
+    color: #d66c44;
+}
+
+.accordion-list .accordion-active {
+    border-radius: 8px 8px 0 0;
+}
+
+.accordion-list .accordion-active:after {
+    content: "\2212";
+}
+
+.accordion-list .accordion-active+.accordion-item {
+    border: 1px solid #324856;
+    border-top-style: hidden;
+    border-radius: 0 0 8px 8px;
+    /* overflow: auto; */
+    padding: 0 22px;
+}
+
+.accordion-list .accordion-item {
+    padding: 0 22px;
+    overflow: hidden;
+    max-height: 0;
+    transition: all 0.3s ease-out;
+}
+
+.accordion-list .accordion-item ul {
+    padding: 20px 0;
+}
+
+.accordion-list .accordion-item li:hover,
+.accordion-list .accordion-item li:hover small {
+    color: #d18237;
+}
+
+.accordion-list .accordion-item h4 {
+    text-align: left;
+    padding-top: 20px;
+    padding-bottom: 5px;
+    margin-bottom: 0;
+    border-bottom: 1px solid #d18237;
+}
+
+.accordion-list .accordion-item small {
+    font-size: 1.4rem;
+    color: #666;
+}
+
+.point h3 {
+    padding-top: 20px;
+}
+
+.ranking-card {
+    border: 1px solid #d18237;
+    border-radius: 8px;
+    margin: 20px auto;
+    padding: 30px 25px 10px;
+    max-width: 445px;
+    box-shadow: 1px 1px 5px #d18237;
+}
+
+/* 層級表 */
+.level-chart {
+    max-width: 495px;
+    text-align: left;
+    margin: 30px auto;
+}
+
+.level-chart .level-list>li {
+    padding: 15px 0 15px 50px;
+    color: #444;
+}
+
+.level-chart .level-list>li:first-of-type {
+    background: #ddd;
     text-align: center;
+    padding: 15px 0;
 }
 
-.tournament-card i {
-    padding: 0 8px 0 0;
+.level-chart .level-list>li:not(:first-of-type) {
+    position: relative;
+    /* border: 1px solid #000; */
 }
 
-.tournament-card p {
-    margin: 0;
-    padding: 0.5rem 0;
+.level-chart .level-list>li:not(:first-of-type):before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 15px;
+    border-right: 14px solid transparent;
+    border-left: 14px solid transparent;
 }
 
-.tournament-card ul {
-    list-style-position: inside;
-    padding: 0.5rem 0 2rem 1.6rem;
+.level-chart button {
+    color: #eee;
+    font-size: 1.4rem;
 }
 
-.tournament-card ul li {
-    list-style-type: disc;
+.level-chart button small {
+    color: #ddd;
+    padding-left: 5px;
+}
+
+.level-chart button:hover,
+.level-chart button:hover small {
+    color: #888;
+}
+
+.level-chart .level-1-color {
+    background: #d18237;
+}
+
+.level-chart .level-1-color:before {
+    border-bottom: 16px solid #d18237;
+}
+
+.level-chart .level-2-color {
+    background: #d66c44;
+}
+
+.level-chart .level-2-color:before {
+    border-bottom: 16px solid #d66c44;
+}
+
+.level-chart .level-3-color {
+    background: #4a746a;
+}
+
+.level-chart .level-3-color:before {
+    border-bottom: 16px solid #4a746a;
+}
+
+.level-chart .level-4-color {
+    background: #324856;
+}
+
+.level-chart .level-4-color:before {
+    border-bottom: 16px solid #324856;
+}
+
+.level-chart .level-5-color {
+    background: #666;
+}
+
+.level-chart .level-5-color:before {
+    border-bottom: 16px solid #666;
+}
+
+.level-btn {
+    width: 100%;
+    text-align: left;
+}
+
+.level-btn:after {
+    content: "\002B";
+    float: right;
+    padding-right: 15px;
+    font-size: 1.8rem;
+}
+
+.level-sub-item {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-out;
+    padding-left: 10px;
+}
+
+.level-sub-item ul {
+    padding: 10px 0;
+}
+
+.level-sub-item li {
+    color: #fefcfd;
+    font-size: 1.4rem;
+}
+
+.accordion-active:after {
+    content: "\2212";
 }
 
 /* points table */
-.points-wrap {
-    padding: 20px 30px 0;
-}
-
 .points-table {
     margin: 15px 0 30px;
 }
@@ -84,6 +261,7 @@ td {
 .points-table th,
 td {
     min-width: 110px;
+    font-size: 1.4rem;
 }
 
 .points-table th {
@@ -118,10 +296,6 @@ td {
     margin-bottom: 3.5rem;
 }
 
-.title-post p {
-    text-align: center;
-}
-
 .title-post li>a:hover {
     color: #d66c44;
 }
@@ -147,20 +321,26 @@ td {
     letter-spacing: 0.05rem;
 }
 
-.tournament-section .item {
+.item {
     background: #D18237;
     border-radius: 100px;
     text-align: center;
-    vertical-align: center;
+    max-width: 495px;
+    margin: 8px auto;
+    padding: 2px;
 }
 
-.tournament-section .item p {
+.item p {
     color: #fefcfd;
+    line-height: 30px;
+    padding: 0;
+    margin: 0;
 }
 
 .tournament-wrap {
     padding: 1rem 0;
     margin: 0 auto;
+    max-width: 495px;
 }
 
 .tournament-table th,
@@ -206,6 +386,24 @@ td {
     background-color: #d66c44;
 }
 
+/* section 2-3 & 2-4 */
+.tour-list {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px 20px 20px 30px;
+}
+
+.tour-list li {
+    padding: 5px 5px 5px 20px;
+    margin: 8px auto;
+    background: #324856;
+    border-radius: 5px;
+}
+
+.tour-list li a {
+    color: #fefcfd;
+}
 
 
 /* 手機螢幕 */
@@ -226,7 +424,87 @@ td {
 }
 
 /* 平板螢幕 */
-@media screen and (min-width: 768px) {}
+@media screen and (min-width: 768px) {
+
+    .tour .read-area {
+        padding-bottom: 30px;
+    }
+
+    .ranking-card-group {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 40px;
+    }
+
+    .ranking-card {
+        width: 45%;
+        max-width: 500px;
+    }
+
+    .level-chart-group {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .level-chart-group .level-chart {
+        width: 45%;
+    }
+
+    .item-group {
+        padding: 40px 0 50px;
+    }
+
+    .item-group .item {
+        width: 40%;
+        max-width: 400px;
+    }
+
+    .tournament-wrap-group {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .tournament-wrap-group .tournament-wrap {
+        width: 45%;
+        margin: 0;
+        min-width: 500px;
+    }
+
+}
 
 /* 電腦螢幕 */
-@media screen and (min-width:992px) {}
+@media screen and (min-width:992px) {
+    .accordion-group {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .accordion-list {
+        width: 32%;
+        margin: 6px;
+    }
+
+    /* section 2-3 */
+    .tour-list {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .tour-list li {
+        width: 22%;
+        text-align: center;
+        padding: 5px;
+    }
+
+    .WTA-tour-list {
+        flex-wrap: wrap;
+    }
+
+    .WTA-tour-list li {
+        width: 100%;
+    }
+
+
+}

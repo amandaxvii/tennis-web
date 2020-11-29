@@ -14,6 +14,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    max-width: 495px;
+    margin: 0 auto;
 }
 
 .unit-list li {
@@ -25,6 +27,11 @@
     padding: 1rem;
     margin: 1rem 0;
     box-shadow: 1px 1px 2px 1px #4a746a;
+}
+
+.score-system-list {
+    margin: 0 auto;
+    max-width: 495px;
 }
 
 .score-system-list li {
@@ -61,6 +68,7 @@ table i {
 
 /* 計分板表格 */
 .score-board-table {
+    width: 100%;
     display: block;
     margin: 1.5rem auto;
     border: 3px solid #d18237;
@@ -107,7 +115,9 @@ table i {
     border-radius: 6px;
     padding: 10px;
     border: 1px solid #4a746a;
+    margin: 0 auto;
     margin-bottom: 3rem;
+    max-width: 495px;
 }
 
 .score-details-list {
@@ -155,6 +165,11 @@ table i {
 }
 
 /* point 分數說明表格 */
+.point-system-table {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
 .point-system-table th,
 .point-system-table td {
     border: 1px solid #ddd;
@@ -182,6 +197,11 @@ table i {
 
 
 /* 一局比分範例表格樣式 */
+.example-game-scores {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
 .example-game-scores th,
 .example-game-scores td,
 .tie-break-score th,
@@ -191,6 +211,11 @@ table i {
 }
 
 /* 局 game display */
+.game-display {
+    margin: 0 auto;
+    max-width: 495px;
+}
+
 .game-display th:nth-child(3),
 .game-display td:nth-child(3),
 .game-display th:nth-child(5),
@@ -200,14 +225,29 @@ table i {
 
 .score-btn {
     width: 100%;
-    margin: 0 auto;
+    margin: 6px auto;
     text-align: center;
     padding: 6px 0 20px;
 }
 
 .score-btn button {
-    padding: 6px 10px;
+    padding: 10px 20px;
     margin: 0 10px;
+    background: #4a746a;
+    color: #fefcfd;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3);
+    border: 1px solid #ddd;
+}
+
+.score-btn button:hover {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.tie-break-score {
+    margin: 0 auto;
+    max-width: 700px;
 }
 
 /* 手機螢幕 */
@@ -216,3 +256,7 @@ table i {
         font-size: 1.4rem;
     }
 }
+
+
+/* 平板螢幕 */
+@media screen and (min-width: 768px) {}

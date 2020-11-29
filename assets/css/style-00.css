@@ -1,233 +1,144 @@
-/* 共用設定 */
-
-#menu-control {
-    position: absolute;
-    z-index: -2;
-    opacity: 0;
-}
-
-/* header fixed */
-.header {
-    width: 100%;
-    position: fixed;
-    top: 10px;
-}
-
-.header-content {
-    width: 90%;
-    height: 50px;
-    margin: 0 auto;
-    background: #fefcfd;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    border: 1px solid #888;
-    border-radius: 0.5rem;
-}
-
-.header-content i {
-    color: #000;
-}
-
-/* Home-icon */
-.header-content .home-icon {
-    display: block;
-    background: #ac933f;
-    line-height: 50px;
-    padding: 0 1.5rem;
-    position: relative;
-    border-radius: 0.5rem 0 0 0.5rem;
-}
-
-.header-content .home-icon::after {
-    content: '';
-    display: block;
-    position: absolute;
-    width: 0;
-    height: 0;
-    top: 0;
-    left: 100%;
-    border-top: 50px solid #ac933f;
-    border-right: 12px solid transparent;
-}
-
-nav i {
-    padding-left: 0.5rem;
-}
-
-.nav-menu a {
-    color: #444;
-    display: inline-block;
-}
-
-.nav-submenu {
-    display: none;
-}
-
-.nav-menu>li:hover .nav-submenu {
-    display: block;
-}
-
-.nav-menu li:hover a {
-    color: #261a28;
-}
-
+/* home page sytle */
 .wrapper {
-    width: 80%;
+    padding: 120px 30px 50px;
     text-align: center;
 }
 
+.wrapper h2 {
+    font-size: 2.0rem;
+    font-weight: 500;
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+
+.poster {
+    max-width: 495px;
+    border: 1px solid #d18237;
+    border-radius: 8px;
+    margin: 0px auto 20px;
+    padding: 55px 20px 30px;
+}
+
+.poster h3 {
+    font-size: 2.0rem;
+    padding-bottom: 10px;
+    text-align: left;
+}
+
+.poster .info-item {
+    margin-top: 30px;
+    padding: 10px 20px;
+    background: #d66c44;
+    font-size: 1.6rem;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.poster .info-item a:link,
+.poster .info-item a:visited {
+    color: #fefcfd;
+    font-size: 1.6rem;
+}
+
+.poster .info-item i {
+    padding-left: 20px;
+    color: #fefcfd;
+}
+
+.poster .info-item:hover a,
+.poster .info-item:hover i {
+    color: #324856;
+}
+
+/* footer sytle */
 footer {
     width: 100%;
     text-align: center;
-    margin: 150px auto auto;
+    padding: 30px;
 }
-
 
 /* 手機螢幕 */
-@media screen and (max-width: 767px) {
-
-    /* RWD icon */
-    .header-content .header-rwd-icon {
-        display: block;
-        background: #ac933f;
-        line-height: 50px;
-        padding: 0 1.5rem;
-        position: relative;
-        border-radius: 0 0.5rem 0.5rem 0;
-    }
-
-    .header-content .header-rwd-icon::after {
-        content: '';
-        display: block;
-        position: absolute;
-        width: 0;
-        height: 0;
-        top: 0;
-        right: 100%;
-        border-right: 12px solid #ac933f;
-        border-top: 50px solid transparent;
-    }
-
-    /* 漢堡選單menu區塊 */
-    nav {
-        width: 100%;
-        height: auto;
-        margin: 0 auto;
-        padding: 1rem;
-        position: absolute;
-        left: 0;
-        text-align: center;
-        border: 1px solid #888;
-        top: 100%;
-        border-radius: 0.5rem;
-
-        opacity: 0;
-        transition: opacity 0.5s;
-    }
-
-    /* 波浪號後面只能接input同層，所以要先選到.header */
-    #menu-control:checked~.header nav {
-        opacity: 1;
-    }
-
-    .nav-menu li+li {
-        border-top: 1px solid #888;
-    }
-
-
-    .nav-menu a {
-        display: inline-block;
-        padding: 1rem 0;
-        transition: all 0.3;
-    }
-
-    .nav-menu>li:hover>a {
-        transform: scale(1.1);
-        color: lightcoral;
-    }
-
-    .nav-submenu>li>a {
-        width: 100%;
-    }
-
-    .nav-submenu>li:hover>a {
-        background: rgba(171, 146, 63, 0.3);
-    }
-
-    .wrapper {
-        margin: 65vh auto 5vh;
-    }
-}
-
-/* 平板 & 電腦共用設定 */
-@media screen and (min-width: 768px) {
-    .header label {
-        display: none;
-    }
-
-    .header-content .nav-menu {
-        display: flex;
-    }
-
-    .header-content .nav-menu>li {
-        padding: 1.5rem 4rem 1.5rem 3rem;
-        position: relative;
-    }
-
-    /* nav 第一層動畫 */
-    .nav-menu>li>a:before {
-        content: '';
-        position: absolute;
-        width: 0.2rem;
-        height: 100%;
-        left: 0;
-        top: 0;
-        background: #ac933f;
-        opacity: 0.5;
-        transition: all 0.3s;
-    }
-
-    .nav-menu>li:last-child>a::before {
-        border-radius: 0 0.5rem 0.5rem 0;
-    }
-
-    .nav-menu>li:hover>a:before {
-        width: 100%;
-    }
-
-    .nav-menu>li .nav-submenu {
-        position: absolute;
-        left: 0;
-        top: 100%;
-        width: 100%;
-
-    }
-
-    .nav-submenu>li a {
-        width: 100%;
-        padding: 0.5rem 1.5rem;
-    }
-
-    .nav-submenu>li:hover>a {
-        background: rgba(171, 146, 63, 0.3);
-    }
-}
+@media screen and (max-width: 767px) {}
 
 /* 平板螢幕 */
-@media screen and (max-width: 991px) {
+@media screen and (min-width: 768px) {
     .wrapper {
-        margin: 50vh auto 25vh;
+        padding: 160px 30px 90px;
     }
 }
 
 /* 電腦螢幕 */
 @media screen and (min-width: 992px) {
 
+    /* 做向下滾動 stikcy Navbar 效果 */
+    /* .header {
+        position: relative;
+    } */
+
+    /* .sticky {
+        position: fixed;
+        top: 0;
+    } */
+
+    /* 要空出 Navbar 的高度 */
+    /* .sticky+.wrap-side .poster-group {
+        padding-top: 200px;
+    } */
 
     .wrapper {
-        margin: 50vh auto 25vh;
+        padding: 180px 30px 160px;
+
     }
 
+    .wrapper h1 {
+        font-size: 3.8rem;
+    }
+
+    .wrapper h2 {
+        font-size: 2.4rem;
+    }
+
+    .wrapper small {
+        font-size: 1.6rem;
+    }
+
+    .container-fluid {
+        width: 100%;
+        background: #d18237;
+        background: linear-gradient(180deg, transparent 50%, #d18237 50%) center center;
+        background: linear-gradient(20deg, #d66c44, #d18237, #4a746a, #324856) center center / 100% 100%;
+        background: linear-gradient(20deg, #d18237, #d66c44) center center / 100% 100%;
+        background: none;
+    }
+
+    .wrap-large-home {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .poster-group {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        position: relative;
+        top: -60px;
+    }
+
+    .poster {
+        width: 30%;
+        margin: 0px 0px 40px;
+        border: 1px solid #ddd;
+        background: #324856;
+        box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+
+    }
+
+    .poster h3,
+    .poster p {
+        color: #fefcfd;
+    }
+
+    .poster strong {
+        color: #fefcfd;
+    }
 }

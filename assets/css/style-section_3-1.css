@@ -1,3 +1,7 @@
+.breadcrumbs {
+    display: none;
+}
+
 .court-layout {
     width: 100%;
 }
@@ -163,17 +167,25 @@
     margin-bottom: 15px;
 }
 
-.glossary-btn {
-    width: 20%;
-    padding: 5px;
-    background: #D66c44;
-    color: #fff;
-    border-color: #d66c44;
-    border-radius: 2px;
-}
-
 .court-btn {
     padding: 10px 0;
+}
+
+.glossary-btn {
+    width: 20%;
+    padding: 8px;
+    background: #D66c44;
+    color: #fefcfd;
+    border-color: #d66c44;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3);
+    border: 1px solid #ddd;
+}
+
+.glossary-btn:hover,
+#reset-btn:hover {
+    background: rgba(0, 0, 0, 0.5);
 }
 
 .court-btn .singles-btn,
@@ -183,8 +195,9 @@
 
 #reset-btn {
     margin-left: 1.5rem;
-    background: #4a756a;
-    border-color: #4a756a;
+    background: #d18237;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3);
+    border: 1px solid #ddd;
 }
 
 .court-glossary-select {
@@ -255,12 +268,6 @@
 
 /* 平板螢幕 - 直式 */
 @media screen and (min-width: 768px) {
-
-
-
-    .court-group {
-        margin: 13rem auto;
-    }
 
     .outside-space {
         width: 600px;

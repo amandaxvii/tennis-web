@@ -1,5 +1,4 @@
 /* 共用設定 */
-
 #menu-control {
     position: absolute;
     z-index: -2;
@@ -10,28 +9,30 @@
 .header {
     width: 100%;
     position: fixed;
-    top: 10px;
+    margin: 15px auto;
+    top: 0;
+
+    /* 左右留白 */
+    padding: 0 5vw;
 
     /* 為了不要讓內容的層級被蓋過去 */
     z-index: 10;
 }
 
 .header-content {
-    width: 90%;
+    width: 100%;
     height: 50px;
     margin: 0 auto;
     background: #Fefcfd;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
     border: 1px solid #d66c44;
-    border-radius: 0.5rem;
-    box-shadow: 1px 1px 1px #d66c44;
+    border-radius: 8px;
+    box-shadow: 0px 1px 1px 0px #d66b44;
 }
 
-.header-content i {
-    color: #000;
+.header-content .header-logo {
+    box-shadow: 0px 1px 1px 0px #d66b44 inset;
+    border-radius: 6px;
 }
 
 .header-content .home-icon i,
@@ -39,15 +40,17 @@
     color: #fff;
 }
 
-
-/* Home-icon */
-.header-content .home-icon {
+/* 左側 Home-icon 樣式 */
+.header-logo .home-icon {
     display: block;
     background: #d66c44;
+
+    height: 50px;
     line-height: 50px;
-    padding: 0 1.5rem;
+    padding: 0 15px;
     position: relative;
-    border-radius: 0.5rem 0 0 0.5rem;
+    border-radius: 6px 0 0 6px;
+
 }
 
 .header-content .home-icon::after {
@@ -62,53 +65,102 @@
     border-right: 12px solid transparent;
 }
 
+.home-icon:hover i {
+    color: #324856;
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+    text-align: center;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    background: inherit;
+}
+
+.accordion i {
+    padding-left: 10px;
+}
+
 nav i {
     padding-left: 0.5rem;
 }
 
+/* 導覽列文字小一些 */
 .nav-menu a {
-    color: #444;
+    /* color: #444; */
     display: inline-block;
+    font-size: 1.4rem;
 }
 
 .nav-submenu {
     display: none;
 }
 
-.nav-menu>li:hover .nav-submenu {
-    display: block;
-}
-
-.nav-menu li:hover a {
-    color: #261a28;
-}
-
-.wrapper {
-    width: 80%;
-    text-align: center;
-}
-
-footer {
-    width: 100%;
-    text-align: center;
-    margin: 150px auto auto;
-}
-
-
 /* 手機螢幕 */
 @media screen and (max-width: 767px) {
 
-    /* RWD icon */
-    .header-content .header-rwd-icon {
+    /* 漢堡選單 click 事件 */
+    /* 波浪號後面只能接input同層，所以要先選到.header */
+    #menu-control:checked~.header .header-nav {
+        opacity: 1;
         display: block;
-        background: #d66c44;
-        line-height: 50px;
-        padding: 0 1.5rem;
-        position: relative;
-        border-radius: 0 0.5rem 0.5rem 0;
     }
 
-    .header-content .header-rwd-icon::after {
+    #menu-control:checked~.header .header-content {
+        height: auto;
+    }
+
+    #menu-control:checked~.header .home-icon {
+        border-radius: 6px 0 0 0;
+    }
+
+    #menu-control:checked~.header .header-rwd-icon {
+        border-radius: 0 6px 0 0;
+    }
+
+    #menu-control:checked~.header .header-rwd-icon :first-child {
+        opacity: 0;
+    }
+
+    #menu-control:checked~.header .header-rwd-icon :last-child {
+        display: block;
+    }
+
+    #menu-control:checked~.header+.breadcrumbs {
+        display: none;
+    }
+
+    #menu-control:checked~.header~.court-layout div {
+        z-index: -2;
+    }
+
+    .header-content {
+        flex-wrap: wrap;
+        overflow: hidden;
+        transition: all 0.5s;
+    }
+
+    .header-content .header-logo {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* 右側 RWD icon */
+    .header-rwd-icon {
+        display: block;
+        background: #d66c44;
+        height: 50px;
+        line-height: 50px;
+        padding: 0 15px;
+        position: relative;
+        border-radius: 0 6px 6px 0;
+        cursor: pointer;
+    }
+
+    .header-rwd-icon::after {
         content: '';
         display: block;
         position: absolute;
@@ -127,58 +179,72 @@ footer {
         display: none;
     }
 
+    .home-icon:hover i,
+    .header-rwd-icon:hover i {
+        color: #324856;
+    }
+
     /* 漢堡選單menu區塊 */
-    nav {
+    .header-nav {
         width: 100%;
         height: auto;
         margin: 0 auto;
-        padding: 1rem;
-        position: absolute;
-        left: 0;
+        padding: 12px 22px 8px;
         text-align: center;
-        border: 1px solid #d66c44;
-        top: 100%;
-        border-radius: 0.5rem;
-        background: #fefcfd;
+        background: #d66c44;
 
         display: none;
         opacity: 0;
         transition: all 0.5s;
     }
 
-    /* 波浪號後面只能接input同層，所以要先選到.header */
-    #menu-control:checked~.header nav {
-        opacity: 1;
-        display: block;
+    .nav-menu>li {
+        background: #324856;
+        cursor: pointer;
+        width: 100%;
+        border-radius: 5px;
+        margin-bottom: 8px;
     }
 
-    #menu-control:checked~.header .header-rwd-icon :first-child {
-        opacity: 0;
+    .accordion {
+        color: #d66c44;
+        font-weight: 600;
+        cursor: pointer;
+        width: 100%;
+        font-size: 1.4rem;
+        padding: 12px 0;
+        border-radius: 5px;
+        position: relative;
     }
 
-    #menu-control:checked~.header .header-rwd-icon :last-child {
-        display: block;
-    }
-
-    #menu-control:checked~.header+.breadcrumbs {
-        display: none;
-    }
-
-    #menu-control:checked~.header~.side-bar,
-    #menu-control:checked~.header~.court-layout div {
-        z-index: -2;
-    }
-
-    .nav-menu>li>a {
-        text-align: center;
-        color: #4a746a;
-        font-weight: 500;
+    .accordion i {
+        color: #d66c44;
     }
 
     .nav-menu li+li {
-        border-top: 1px solid #d66c44;
+        border-top: 1px solid #324856;
     }
 
+
+    .accordion:before {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0;
+        top: 68%;
+        left: -40%;
+        background: #fefcfd;
+        border-radius: 5px;
+        opacity: 0.4;
+        transition: all 0.3s;
+    }
+
+
+    .nav-menu>li:hover .accordion:before {
+        height: 1px;
+        width: 30%;
+        left: 35%;
+    }
 
     .nav-menu a {
         display: inline-block;
@@ -186,12 +252,7 @@ footer {
         transition: all 0.3;
     }
 
-    .nav-menu>li:hover>a {
-        transform: scale(1.1);
-        font-weight: 600;
-        color: #d18237;
-    }
-
+    /* 子選單設定 */
     .nav-submenu {
         background: #fefcfd;
     }
@@ -202,51 +263,74 @@ footer {
 
     .nav-submenu>li:hover>a {
         background: #d66b449d;
-        color: #fff;
-    }
-
-    .wrapper {
-        margin: 65vh auto 5vh;
+        color: #fefcfd;
     }
 }
 
 /* 平板螢幕 */
 @media screen and (min-width: 768px) {
-    .header label {
+
+    /* hide RWD icon */
+    .header .header-logo label {
         display: none;
+        opacity: 0;
+        z-index: -10;
+    }
+
+
+    .header-content {
+        justify-content: space-between;
+        align-items: center;
     }
 
     .header-content .nav-menu {
         display: flex;
     }
 
-    .header-content .nav-menu>li {
-        padding: 1.5rem 4rem 1.5rem 3rem;
+    .header-content .nav-menu .dropdown {
         position: relative;
+        padding-right: 12px;
+
+    }
+
+    .nav-menu .dropdown .accordion {
+        padding: 0 20px;
+        height: 50px;
+        line-height: 50px;
+    }
+
+    .nav-menu .dropdown .accordion,
+    .nav-menu .dropdown i {
+        color: #d66c44;
     }
 
     /* nav 第一層動畫 */
-    .nav-menu>li>a:before {
+    .nav-menu .dropdown:before {
         content: '';
         position: absolute;
         width: 0rem;
         height: 100%;
         left: 0;
         top: 0;
-        background: #d66c44;
-        opacity: 0.4;
+        background: #d18237;
+        opacity: 0.2;
         transition: all 0.3s;
     }
 
-    .nav-menu>li:last-child>a::before {
-        border-radius: 0 0.5rem 0.5rem 0;
+    .nav-menu .dropdown:last-child::before {
+        border-radius: 0 5px 5px 0;
     }
 
-    .nav-menu>li:hover>a:before {
+    .nav-menu .dropdown:hover:before {
         width: 100%;
     }
 
-    .nav-menu>li .nav-submenu {
+    .nav-menu .dropdown:hover .nav-submenu {
+        display: block;
+    }
+
+    /* nav submenu 設定 */
+    .nav-menu .dropdown .nav-submenu {
         position: absolute;
         left: 0;
         top: 100%;
@@ -256,30 +340,21 @@ footer {
     .nav-submenu {
         background: #d66c44;
         z-index: 2;
+        box-shadow: 1px 1px 30px rgba(0, 0, 0, 0.3);
     }
 
     .nav-submenu>li a {
         width: 100%;
-        padding: 0.5rem 1.5rem;
-
-    }
-
-    .nav-submenu>li:hover>a {
-        background: #d18237;
+        padding: 8px 15px;
         color: #fff;
     }
 
-    .wrapper {
-        margin: 50vh auto 25vh;
+    .nav-submenu>li:hover>a {
+        background: #324856;
+        color: #d66c44;
+        font-weight: 600;
     }
 }
 
 /* 電腦螢幕 */
-@media screen and (min-width: 992px) {
-
-
-    .wrapper {
-        margin: 50vh auto 25vh;
-    }
-
-}
+@media screen and (min-width: 992px) {}

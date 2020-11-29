@@ -10,76 +10,120 @@
 
     <!-- common styles for all pages -->
     <link rel="stylesheet" href="assets/css/style-all.css">
-    <link rel="stylesheet" href="assets/css/style-00.css">
+    <!-- navigation styles -->
     <link rel="stylesheet" href="assets/css/style-navigation.css">
+    <!-- home page sytles -->
+    <link rel="stylesheet" href="assets/css/style-00.css">
     <title>Tennis</title>
 </head>
 
 <body>
-    <!-- 控制 label checkbox -->
-    <input type="checkbox" name="" id="menu-control">
+    <div class="container-fluid">
+        <!-- 控制 label checkbox -->
+        <input type="checkbox" name="" id="menu-control">
 
-    <!-- navigation  -->
-    <header class="header">
-        <div class="header-content">
-            <a href="" class="home-icon">
-                <i class="fas fa-home "></i>
-            </a>
-
-            <!-- 漢堡選單 -->
-            <label for="menu-control">
-                <div class="header-rwd-icon">
-                    <i class="fas fa-bars "></i>
-                    <i class="fas fa-times"></i>
-                </div>
-            </label>
-
-            <nav>
-                <ul class="nav-menu">
-                    <li>
-                        <a href="pages/section_1.html">組織介紹</a>
-                        <i class="fas fa-angle-down"></i>
-                        <ul class="nav-submenu">
-                            <li><a href="/pages/section_1-1.html">ITF</a></li>
-                            <li><a href="/pages/section_1-2.html">ATP</a></li>
-                            <li><a href="/pages/section_1-3.html">WTA</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="">重點賽事</a>
-                        <i class="fas fa-angle-down"></i>
-                        <ul class="nav-submenu">
-                            <li><a href="/pages/section_2-1.html">賽事積分列表</a></li>
-                            <li><a href="/pages/section_2-2.html">大滿貫</a></li>
-                            <li><a href="/pages/section_2-3.html">ATP 巡迴賽</a></li>
-                            <li><a href="/pages/section_2-4.html">WTA 巡迴賽</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="">比賽規則</a>
-                        <i class="fas fa-angle-down"></i>
-                        <ul class="nav-submenu">
-                            <li><a href="pages/section_3-1.html">球場</a></li>
-                            <li><a href="/pages/section_3-2.html">計分系統</a></li>
-                            <li><a href="">人員</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
+        <!-- title-->
+        <div class="wrapper">
+            <h1>Tennis Guide</h1>
+            <h2>你想了解的網球資訊</h2>
+            <small>Everything You Need to Know About Tennis</small>
         </div>
-    </header>
 
-    <!-- content -->
-    <div class="wrapper">
-        <h1>Tennis Guide</h1>
-        <p>你想了解的網球資訊</p>
-        <small>Everything You Need to Know About Tennis</small>
+        <!-- navigation fixed -->
+        <header class="header">
+            <div class="header-content">
+                <div class="header-logo">
+                    <a href="index.html" class="home-icon">
+                        <i class="fas fa-home "></i>
+                    </a>
+
+                    <!-- 漢堡選單 -->
+                    <label for="menu-control">
+                        <div class="header-rwd-icon">
+                            <i class="fas fa-bars"></i>
+                            <i class="fas fa-times"></i>
+                        </div>
+                    </label>
+                </div>
+
+                <nav class="header-nav">
+                    <ul class="nav-menu">
+                        <li class="dropdown">
+                            <button class="accordion">組織介紹<i class="fas fa-chevron-circle-down"></i></button>
+
+                            <ul class="nav-submenu">
+                                <li><a href="/pages/section_1-1.html">ITF</a></li>
+                                <li><a href="/pages/section_1-2.html">ATP</a></li>
+                                <li><a href="/pages/section_1-3.html">WTA</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <button class="accordion">重點賽事<i class="fas fa-chevron-circle-down"></i></button>
+                            <ul class="nav-submenu">
+                                <li><a href="/pages/section_2-1.html">賽事積分列表</a></li>
+                                <li><a href="/pages/section_2-2.html">大滿貫</a></li>
+                                <li><a href="/pages/section_2-3.html">ATP 巡迴賽</a></li>
+                                <li><a href="/pages/section_2-4.html">WTA 巡迴賽</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <button class="accordion">比賽規則<i class="fas fa-chevron-circle-down"></i></button>
+                            <ul class="nav-submenu">
+                                <li><a href="/pages/section_3-1.html">球場</a></li>
+                                <li><a href="/pages/section_3-2.html">計分系統</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
     </div>
 
+
+
+    <!-- contents -->
+    <div class="wrap-side wrap-large-home">
+        <div class="poster-group">
+            <div class="poster">
+                <h3>職業網球是如何運作？</h3>
+                <p>了解職業網球是由哪些組織去共同維護相關事務與比賽運作。主要有三大組織：<strong>ITF ( 國際網球總會 )</strong>、<strong>ATP ( 職業網球聯合會
+                        )</strong>、<strong>WTA ( 國際女子網球協會
+                        )</strong>。</p>
+                <button class="info-item">
+                    <a href="pages/section_1-1.html">組織介紹<i class="fas fa-chevron-circle-right"></i></a>
+                </button>
+            </div>
+            <div class="poster">
+                <h3>職業巡迴賽事時間與積分？</h3>
+                <p>介紹男子職業網球與女子職業網球參與的巡迴賽事，還有賽事所獲得的排名積分，可以了解到一年中有哪些賽事值得關注。其中大滿貫賽事 (Grand Slam)
+                    是規模最大也最重要的賽事，可以先從四大滿貫賽事開始觀看。
+                </p>
+                <button class="info-item">
+                    <a href="pages/section_2-1.html">重點賽事<i class="fas fa-chevron-circle-right"></i></a>
+                </button>
+            </div>
+            <div class="poster">
+                <h3>奇特的網球比分計算規則？</h3>
+                <p>簡易了解網球場地範圍、單雙打區域，與球場區域和球場線術語。
+                    網球計分系統與其他球類相較下頗為特異，一開始接觸會覺得複雜，分成四個單位
+                    <strong>分（point）</strong>、<strong>局（game）</strong>、<strong>盤（set）</strong>
+                    、<strong>場（match）</strong>，四分贏得一局，六局贏得一盤，依各賽制不同，贏得特定盤數即拿下該場比賽。
+                </p>
+                <button class="info-item">
+                    <a href="pages/section_3-1.html">比賽規則<i class="fas fa-chevron-circle-right"></i></a>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
     <footer>
         &copy; copyright 2020
     </footer>
 
+
+    <script src="/assets/js/section-navigation.js"></script>
+    <!-- <script src="/assets/js/index.js"></script> -->
 </body>
 
 </html>

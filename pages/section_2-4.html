@@ -23,35 +23,36 @@
     <!-- 控制 label checkbox -->
     <input type="checkbox" name="" id="menu-control">
 
-    <!-- navigation  -->
+    <!-- navigation fixed -->
     <header class="header">
         <div class="header-content">
-            <a href="../index.html" class="home-icon">
-                <i class="fas fa-home "></i>
-            </a>
+            <div class="header-logo">
+                <a href="../index.html" class="home-icon">
+                    <i class="fas fa-home "></i>
+                </a>
 
-            <!-- 漢堡選單 -->
-            <label for="menu-control">
-                <div class="header-rwd-icon">
-                    <i class="fas fa-bars "></i>
-                    <i class="fas fa-times"></i>
-                </div>
-            </label>
+                <!-- 漢堡選單 -->
+                <label for="menu-control">
+                    <div class="header-rwd-icon">
+                        <i class="fas fa-bars"></i>
+                        <i class="fas fa-times"></i>
+                    </div>
+                </label>
+            </div>
 
-            <nav>
+            <nav class="header-nav">
                 <ul class="nav-menu">
-                    <li>
-                        <a href="section_1.html">組織介紹</a>
-                        <i class="fas fa-angle-down"></i>
+                    <li class="dropdown">
+                        <button class="accordion">組織介紹<i class="fas fa-chevron-circle-down"></i></button>
+
                         <ul class="nav-submenu">
                             <li><a href="section_1-1.html">ITF</a></li>
                             <li><a href="section_1-2.html">ATP</a></li>
                             <li><a href="section_1-3.html">WTA</a></li>
                         </ul>
                     </li>
-                    <li>
-                        <a href="">重點賽事</a>
-                        <i class="fas fa-angle-down"></i>
+                    <li class="dropdown">
+                        <button class="accordion">重點賽事<i class="fas fa-chevron-circle-down"></i></button>
                         <ul class="nav-submenu">
                             <li><a href="section_2-1.html">賽事積分列表</a></li>
                             <li><a href="section_2-2.html">大滿貫</a></li>
@@ -59,13 +60,11 @@
                             <li><a href="section_2-4.html">WTA 巡迴賽</a></li>
                         </ul>
                     </li>
-                    <li>
-                        <a href="">比賽規則</a>
-                        <i class="fas fa-angle-down"></i>
+                    <li class="dropdown">
+                        <button class="accordion">比賽規則<i class="fas fa-chevron-circle-down"></i></button>
                         <ul class="nav-submenu">
                             <li><a href="section_3-1.html">球場</a></li>
                             <li><a href="section_3-2.html">計分系統</a></li>
-                            <li><a href="">人員</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -75,8 +74,9 @@
 
     <div class="wrap-top">
 
-        <div class="wrap-side">
-            <h2>WTA 巡迴賽事</h2>
+        <!-- Intro -->
+        <div class="wrap-side wrap-large">
+            <h2>WTA 巡迴賽事行程</h2>
 
             <!-- breadcrumbs list -->
             <div class="breadcrumbs">
@@ -87,42 +87,52 @@
                 </ul>
             </div>
 
-            <div class="tournament-card title-post">
-                <p><i class="far fa-calendar"></i>WTA 巡迴賽</p>
-                <ul>
-                    <li><a href="#WTA-finals">WTA 巡迴賽錦標賽 WTA Finals</a></li>
-                    <li><a href="#Premier-mandatory">皇冠賽 WTA Premier Mandatory</a></li>
-                    <li><a href="#Premier-five">超五巡迴賽 WTA Premier 5</a></li>
-                    <li><a href="#Premier">頂級巡迴賽 WTA Premier</a></li>
-                    <li><a href="#International-tournaments">國際巡迴賽 WTA International</a></li>
+            <div class="title-post">
+                <article class="read-area">
+                    <p>職業巡迴賽事裡的 WTA 巡迴賽事可再分為五大類，等級最高且績分也是僅次於大滿貫的是 WTA
+                        年終賽，巡迴賽裡級別最高的是四個義務賽，第二級別是超五賽，再來是第三級的超級賽，最低級別是國際賽。 </p>
+                    <p>義務賽、超五賽與超級賽這三項賽事合稱為超級巡迴賽事 (Premier Tournaments) 。</p>
+                </article>
+                <ul class="tour-list WTA-tour-list">
+                    <li><a href="#WTA-finals">WTA 年終賽 WTA Finals</a></li>
+                    <li><a href="#Premier-mandatory">WTA 義務賽 Premier Mandatory</a></li>
+                    <li><a href="#Premier-five">WTA 超五賽 Premier 5</a></li>
+                    <li><a href="#Premier">WTA 超級賽 Premier</a></li>
+                    <li><a href="#International-tournaments">WTA 國際賽 International tournaments</a></li>
 
                 </ul>
             </div>
-            <p>WTA 巡迴賽有四個級別：皇冠賽、超五巡迴賽、頂級巡迴賽和國際巡迴賽，其中皇冠賽、超五巡迴賽、頂級巡迴賽又被合稱頂級賽事（Premier Event）。</p>
         </div>
 
+        <!-- WTA finals -->
         <div class="wrap-fluid-bg">
-            <div class="wrap-side">
+            <div class="wrap-side wrap-large">
                 <section class="tournament-section" id="WTA-finals">
-                    <h3><i class="fas fa-trophy"></i>WTA 巡迴賽錦標賽</h3>
+                    <h3><i class="fas fa-trophy"></i>WTA 年終賽</h3>
                     <h4>WTA Finals</h4>
 
-                    <p>又被稱作WTA年終總決賽，是國際女子網聯在每年末定期舉辦的一項國際頂尖女子網球賽事。其參賽者都是每年WTA巡迴賽中成績前列的選手。
-                    </p>
-                    <p>最近這項比賽以三年一輪於世界各地比賽，2014-2016在新加坡，2019-2029在深圳。WTA年終總決賽通常被認為是繼四大網球公開賽之後水平最高的女子網球賽事，在該項比賽中獲得名次的選手也會獲得僅次於大滿貫賽事的積分(冠軍1500分)。因此這項賽事被視為每年網壇的壓軸好戲。
-                    </p>
-                    <div class="item">
-                        <p>總賽事數量：1</p>
+                    <article class="read-area">
+                        <p>是國際女子網聯在每年末定期舉辦的一項國際頂尖女子網球賽事。其參賽者都是每年 WTA 巡迴賽中成績前列的選手。
+                        </p>
+                        <p>最近這項比賽以三年一輪於世界各地比賽，2014-2016 在新加坡，2019-2029 在深圳。WTA
+                            年終總決賽通常被認為是繼四大網球公開賽之後水平最高的女子網球賽事，在該項比賽中獲得名次的選手也會獲得僅次於大滿貫賽事的積分 (冠軍1500分)。因此這項賽事被視為每年網壇的壓軸好戲。
+                        </p>
+                    </article>
+                    <div class="item-group">
+                        <div class="item">
+                            <p>總賽事數量：1</p>
+                        </div>
+                        <div class="item">
+                            <p>女子賽事</p>
+                        </div>
                     </div>
-                    <div class="item">
-                        <p>女子賽事</p>
-                    </div>
+
                     <div class="tournament-wrap tournament-title">
                         <div class="responsive-table">
                             <table class="tournament-table">
                                 <thead>
                                     <tr>
-                                        <th colspan="2"> <a href="#">WTA 巡迴賽錦標賽</a>
+                                        <th colspan="2"> <a href="#">WTA 年終賽</a>
                                         </th>
                                     </tr>
                                 </thead>
@@ -142,282 +152,302 @@
             </div>
         </div>
 
+        <!-- Premier mandatory -->
         <div class="wrap-fluid-bg">
-            <div class="wrap-side">
+            <div class="wrap-side wrap-large">
                 <section class="tournament-section" id="Premier-mandatory">
-                    <h3><i class="fas fa-trophy"></i>皇冠賽</h3>
+                    <h3><i class="fas fa-trophy"></i>WTA 義務賽</h3>
                     <h4>Premier Mandatory</h4>
-                    <p>重要程度僅次於四大滿貫賽和 WTA 巡迴賽錦標賽，它是由WTA主辦的最高水平的網球賽事，獎金和積分也是WTA巡迴賽中最高的，獎金總額為450萬美元，冠軍可獲得1000分。
-
-                    </p>
-                    <p> 賽事有四個，與男子巡迴賽共同舉辦：印第安泉大師賽、邁阿密大師賽、馬德里大師賽、中國網球公開賽。
-                    </p>
-                    <div class="item">
-                        <p>總賽事數量：4</p>
-                    </div>
-                    <div class="item">
-                        <p>女子賽事</p>
-                    </div>
-                    <p>以下的賽事按照賽事舉行的時間排列：</p>
-
-                    <div class="tournament-wrap tournament-title">
-                        <div class="responsive-table">
-                            <table class="tournament-table">
-                                <thead>
-                                    <tr>
-                                        <th colspan="2"> <a href="#">印第安泉大師賽</a>
-                                            <small>ATP 1000/WTA</small>
-                                        </th>
-
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td colspan="2">WTA Indian Wells Open</td>
-                                    </tr>
-                                    <tr>
-                                        <td>3月上旬</td>
-                                        <td>硬地</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                    <article class="read-area">
+                        <p>重要程度僅次於四大滿貫賽和 WTA 年終賽，它是由 WTA 主辦的最高水平的網球賽事，獎金和積分也是 WTA 巡迴賽中最高的，獎金總額為 450 萬美元，冠軍可獲得 1000 積分。
+                        </p>
+                        <p> 賽事有四個，與男子巡迴賽共同舉辦：印第安泉大師賽、邁阿密大師賽、馬德里大師賽、中國網球公開賽。
+                        </p>
+                        <p>以下的賽事按照賽事舉行的時間排列：</p>
+                    </article>
+                    <div class="item-group">
+                        <div class="item">
+                            <p>總賽事數量：4</p>
+                        </div>
+                        <div class="item">
+                            <p>女子賽事</p>
                         </div>
                     </div>
 
-                    <div class="tournament-wrap tournament-title">
-                        <div class="responsive-table">
-                            <table class="tournament-table">
-                                <thead>
-                                    <tr>
-                                        <th colspan="2">邁阿密大師賽 <small>ATP 1000/WTA</small></th>
+                    <div class="tournament-wrap-group">
+                        <div class="tournament-wrap tournament-title">
+                            <div class="responsive-table">
+                                <table class="tournament-table">
+                                    <thead>
+                                        <tr>
+                                            <th colspan="2"> <a href="#">印第安泉大師賽</a>
+                                                <small>ATP 1000/WTA</small>
+                                            </th>
 
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td colspan="2">Miami Open</td>
-                                    </tr>
-                                    <tr>
-                                        <td>3月下旬</td>
-                                        <td>硬地</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td colspan="2">WTA Indian Wells Open</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3月上旬</td>
+                                            <td>硬地</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="tournament-wrap tournament-title">
-                        <div class="responsive-table">
-                            <table class="tournament-table">
-                                <thead>
-                                    <tr>
-                                        <th colspan="2">馬德里大師賽 <small>ATP 1000/WTA</small></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td colspan="2">Madrid Open</td>
-                                    </tr>
-                                    <tr>
-                                        <td>5月上旬</td>
-                                        <td>紅土</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                        <div class="tournament-wrap tournament-title">
+                            <div class="responsive-table">
+                                <table class="tournament-table">
+                                    <thead>
+                                        <tr>
+                                            <th colspan="2">邁阿密大師賽 <small>ATP 1000/WTA</small></th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td colspan="2">Miami Open</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3月下旬</td>
+                                            <td>硬地</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="tournament-wrap tournament-title">
-                        <div class="responsive-table">
-                            <table class="tournament-table">
-                                <thead>
-                                    <tr>
-                                        <th colspan="2">中國網球公開賽 <small>ATP 500/WTA</small></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td colspan="2">China Open</td>
-                                    </tr>
-                                    <tr>
-                                        <td>9月底</td>
-                                        <td>硬地</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                        <div class="tournament-wrap tournament-title">
+                            <div class="responsive-table">
+                                <table class="tournament-table">
+                                    <thead>
+                                        <tr>
+                                            <th colspan="2">馬德里大師賽 <small>ATP 1000/WTA</small></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td colspan="2">Madrid Open</td>
+                                        </tr>
+                                        <tr>
+                                            <td>5月上旬</td>
+                                            <td>紅土</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="tournament-wrap tournament-title">
+                            <div class="responsive-table">
+                                <table class="tournament-table">
+                                    <thead>
+                                        <tr>
+                                            <th colspan="2">中國網球公開賽 <small>ATP 500/WTA</small></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td colspan="2">China Open</td>
+                                        </tr>
+                                        <tr>
+                                            <td>9月底</td>
+                                            <td>硬地</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
             </div>
         </div>
 
+        <!-- Premier Five -->
         <div class="wrap-fluid-bg">
-            <div class="wrap-side">
+            <div class="wrap-side wrap-large">
                 <section class="tournament-section" id="Premier-five">
-                    <h3><i class="fas fa-trophy"></i>超五巡迴賽</h3>
+                    <h3><i class="fas fa-trophy"></i>WTA 超五賽</h3>
                     <h4>Premier Five</h4>
-                    <p>由WTA主辦的世界頂級網球賽事，獎金和積分僅次於皇冠賽，獎金總額為205萬美元，冠軍可獲得900分。
-                        參賽球員陣容包括世界前10名的至少7位球員。
-                    </p>
-                    <p>賽事有五個：杜哈網球公開賽/杜拜網球公開賽（超五和頂級一年一換）、羅馬網球公開賽、辛辛那提網球公開賽、羅傑斯杯（單數年多倫多/雙數年蒙特婁）、武漢網球公開賽（2014_2028）。</p>
-                    <p>杜哈網球公開賽/杜拜網球公開賽，兩個賽事會在超五賽和頂級巡迴一年一換。</p>
-                    <p>杜拜網球公開賽，同時也是男子ATP 500賽事。</p>
-
-                    <div class="item">
-                        <p>總賽事數量：5</p>
-                    </div>
-                    <div class="item">
-                        <p>女子賽事</p>
-                    </div>
-
-                    <div class="tournament-wrap tournament-title">
-                        <div class="responsive-table">
-                            <table class="tournament-table">
-                                <thead>
-                                    <tr>
-                                        <th colspan="2"><a href="#">杜哈 / 杜拜網球公開賽</a>
-                                        </th>
-
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td colspan="2">Qatar Total Open / Dubai Open</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2月下旬</td>
-                                        <td>硬地</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                    <article class="read-area">
+                        <p>由 WTA 主辦的世界頂級網球賽事，獎金和積分僅次於義務賽，獎金總額為 205 萬美元，冠軍可獲得 900 積分。
+                            參賽球員陣容包括世界前 10 名的至少 7 位球員。
+                        </p>
+                        <p>賽事有五個：杜哈網球公開賽/杜拜網球公開賽（超五賽和超級賽一年一換）、羅馬網球公開賽、辛辛那提網球公開賽、羅傑斯杯（單數年多倫多/雙數年蒙特婁）、武漢網球公開賽（2014_2028）。
+                        </p>
+                        <p>杜哈網球公開賽/杜拜網球公開賽，兩個賽事會在超五賽和超級一年一換。</p>
+                        <p>杜拜網球公開賽，同時也是男子 ATP 500 賽事。</p>
+                    </article>
+                    <div class="item-group">
+                        <div class="item">
+                            <p>總賽事數量：5</p>
+                        </div>
+                        <div class="item">
+                            <p>女子賽事</p>
                         </div>
                     </div>
+                    <div class="tournament-wrap-group">
+                        <div class="tournament-wrap tournament-title">
+                            <div class="responsive-table">
+                                <table class="tournament-table">
+                                    <thead>
+                                        <tr>
+                                            <th colspan="2"><a href="#">杜哈 / 杜拜網球公開賽</a>
+                                            </th>
 
-                    <div class="tournament-wrap tournament-title">
-                        <div class="responsive-table">
-                            <table class="tournament-table">
-                                <thead>
-                                    <tr>
-                                        <th colspan="2"><a href="#">羅馬公開賽</a>
-                                            <small>ATP 1000/WTA</small>
-                                        </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td colspan="2">Qatar Total Open / Dubai Open</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2月下旬</td>
+                                            <td>硬地</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
 
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td colspan="2">Italian Open</td>
-                                    </tr>
-                                    <tr>
-                                        <td>5月中旬</td>
-                                        <td>紅土</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                        <div class="tournament-wrap tournament-title">
+                            <div class="responsive-table">
+                                <table class="tournament-table">
+                                    <thead>
+                                        <tr>
+                                            <th colspan="2"><a href="#">羅馬公開賽</a>
+                                                <small>ATP 1000/WTA</small>
+                                            </th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td colspan="2">Italian Open</td>
+                                        </tr>
+                                        <tr>
+                                            <td>5月中旬</td>
+                                            <td>紅土</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="tournament-wrap tournament-title">
+                            <div class="responsive-table">
+                                <table class="tournament-table">
+                                    <thead>
+                                        <tr>
+                                            <th colspan="2">加拿大大師賽 <small>ATP 1000/WTA</small></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td colspan="2">Rogers Cup</td>
+                                        </tr>
+                                        <tr>
+                                            <td>7月下旬</td>
+                                            <td>硬地</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="tournament-wrap tournament-title">
+                            <div class="responsive-table">
+                                <table class="tournament-table">
+                                    <thead>
+                                        <tr>
+                                            <th colspan="2"><a href="#">辛辛那堤大師賽</a>
+                                                <small>ATP 1000/WTA</small>
+                                            </th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td colspan="2">Cincinnati Masters</td>
+                                        </tr>
+                                        <tr>
+                                            <td>8月中旬</td>
+                                            <td>硬地</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="tournament-wrap tournament-title">
+                            <div class="responsive-table">
+                                <table class="tournament-table">
+                                    <thead>
+                                        <tr>
+                                            <th colspan="2"><a href="#">武漢網球公開賽</a>
+                                            </th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td colspan="2">Wuhan Open</td>
+                                        </tr>
+                                        <tr>
+                                            <td>9月中旬</td>
+                                            <td>硬地</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
-
-                    <div class="tournament-wrap tournament-title">
-                        <div class="responsive-table">
-                            <table class="tournament-table">
-                                <thead>
-                                    <tr>
-                                        <th colspan="2">加拿大大師賽 <small>ATP 1000/WTA</small></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td colspan="2">Rogers Cup</td>
-                                    </tr>
-                                    <tr>
-                                        <td>7月下旬</td>
-                                        <td>硬地</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-
-                    <div class="tournament-wrap tournament-title">
-                        <div class="responsive-table">
-                            <table class="tournament-table">
-                                <thead>
-                                    <tr>
-                                        <th colspan="2"><a href="#">辛辛那堤大師賽</a>
-                                            <small>ATP 1000/WTA</small>
-                                        </th>
-
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td colspan="2">Cincinnati Masters</td>
-                                    </tr>
-                                    <tr>
-                                        <td>8月中旬</td>
-                                        <td>硬地</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-
-                    <div class="tournament-wrap tournament-title">
-                        <div class="responsive-table">
-                            <table class="tournament-table">
-                                <thead>
-                                    <tr>
-                                        <th colspan="2"><a href="#">武漢網球公開賽</a>
-                                        </th>
-
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td colspan="2">Wuhan Open</td>
-                                    </tr>
-                                    <tr>
-                                        <td>9月中旬</td>
-                                        <td>硬地</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-
                 </section>
             </div>
         </div>
 
+        <!-- Premier -->
         <div class="wrap-fluid-bg">
-            <div class="wrap-side">
+            <div class="wrap-side wrap-large">
                 <section class="tournament-section" id="Premier">
-                    <h3><i class="fas fa-trophy"></i>頂級巡迴賽</h3>
+                    <h3><i class="fas fa-trophy"></i>WTA 超級賽</h3>
                     <h4>Premier</h4>
-                    <p>由WTA主辦的一般水平的網球賽事，獎金總額為61.8萬或72.1萬美元，冠軍可獲得470分。賽事有十幾站。
-                    </p>
-                    <div class="item">
-                        <p>總賽事數量：12</p>
+                    <article class="read-area">
+                        <p>由 WTA 主辦的一般水平的網球賽事，獎金總額為 61.8 萬或 72.1 萬美元，冠軍可獲得 470 分。
+                        </p>
+                    </article>
+                    <div class="item-group">
+                        <div class="item">
+                            <p>總賽事數量：12</p>
+                        </div>
+                        <div class="item">
+                            <p>女子賽事</p>
+                        </div>
                     </div>
-                    <div class="item">
-                        <p>女子賽事</p>
-                    </div>
-
                 </section>
             </div>
         </div>
 
+        <!-- 125k series -->
         <div class="wrap-fluid-bg">
-            <div class="wrap-side">
+            <div class="wrap-side wrap-large">
                 <section class="tournament-section" id="International-tournaments">
-                    <h3><i class="fas fa-trophy"></i>國際巡迴賽</h3>
+                    <h3><i class="fas fa-trophy"></i>WTA 國際賽</h3>
                     <h4>International tournaments</h4>
-                    <p>總共有32站賽事，由WTA主辦的較低水平的網球賽事，基本獎金額為23.5萬美元，冠軍排名積分為280分。
-                    </p>
-                    <div class="item">
-                        <p>總賽事數量：32</p>
-                    </div>
-                    <div class="item">
-                        <p>女子賽事</p>
+                    <article class="read-area">
+                        <p>總共有 32 站賽事，由 WTA 主辦的較低水平的網球賽事，基本獎金額為 23.5 萬美元，冠軍排名積分為 280 分。
+                        </p>
+                    </article>
+                    <div class="item-group">
+                        <div class="item">
+                            <p>總賽事數量：32</p>
+                        </div>
+                        <div class="item">
+                            <p>女子賽事</p>
+                        </div>
                     </div>
                 </section>
             </div>
@@ -425,7 +455,7 @@
 
     </div>
 
-
+    <script src="../assets/js/section-navigation.js"></script>
 </body>
 
 </html>

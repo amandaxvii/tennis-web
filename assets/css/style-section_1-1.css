@@ -1,33 +1,4 @@
 /* 共用設定 */
-h1 {
-    font-size: 2.8rem;
-    margin-bottom: 1.2rem;
-}
-
-h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1.2rem;
-}
-
-h3 {
-    font-size: 1.8rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-}
-
-p {
-    font-size: 1.6rem;
-    line-height: 3rem;
-    margin-bottom: 2.5rem;
-}
-
-.wrap-top {
-    padding: 90px 0 0;
-}
-
-.wrap-side {
-    padding: 0 30px;
-}
 
 /* section title */
 .title {
@@ -36,13 +7,7 @@ p {
     margin: 0 auto;
 }
 
-.title h1 {
-    text-align: center;
-
-}
-
 /* section contents */
-
 section p,
 li {
     color: #222;
@@ -70,18 +35,25 @@ section .article-card-wrap {
 }
 
 section .article-card {
-    width: 45%;
-    border: 1px solid #888;
+    border: 1px solid #d18237;
     border-radius: 5px;
-    padding: 6px 15px;
+    padding: 40px 20px 20px;
+}
+
+.article-card h4 {
+    text-align: left;
+    padding-bottom: 10px;
 }
 
 section .article-card a {
-    color: #4a746a;
+    color: #d18237;
 }
 
 section .article-card a:hover {
-    color: #d66c44;
+    color: #D66c44;
+    background: #324856;
+    padding: 5px;
+    border-radius: 3px;
 }
 
 .article-card ul {
@@ -104,14 +76,27 @@ section .article-card a:hover {
 
     section .article-card {
         width: 100%;
-        margin-bottom: 15px;
+        margin-bottom: 25px;
     }
 
 
 }
 
 /* 平板螢幕 */
-@media screen and (min-width: 768px) {}
+@media screen and (min-width: 768px) {
+
+    .title {
+        padding-bottom: 50px;
+    }
+
+    .breadcrumbs {
+        margin-bottom: 0;
+    }
+
+    section .article-card {
+        width: 45%;
+    }
+}
 
 /* 電腦螢幕 */
 @media screen and (min-width: 992px) {}

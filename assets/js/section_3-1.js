@@ -120,7 +120,7 @@ function definitionAreaDisplay() {
 
 
     // 顯示 div & 加上 DOM 樣式
-    if ((definitionDiv.classList.contains('definition-active')) && (definitionDiv.style.display = 'block')) {
+    if ((definitionDiv.classList.contains('definition-active')) && (definitionDiv.style.display === 'block')) {
         definitionDiv.classList.remove('definition-active')
         definitionDiv.style.display = 'none'
     } else {

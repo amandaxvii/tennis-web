@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -16,7 +18,9 @@ body {
     /* body字級大小 1.6rem*10px=16px */
     font-size: 1.6rem;
     line-height: 1.7;
-    letter-spacing: 0.03rem;
+    letter-spacing: 0.1rem;
+    font-family: 'Verdana', 'Noto Sans TC',
+        sans-serif;
 }
 
 /* 字體排版設定 */
@@ -34,7 +38,8 @@ h6 {
 }
 
 h1 {
-    font-size: 2.8rem;
+    font-size: 3.0rem;
+    font-weight: 600;
 }
 
 h2 {
@@ -42,7 +47,7 @@ h2 {
 }
 
 h3 {
-    font-size: 2.4rem;
+    font-size: 2.3rem;
 }
 
 h4 {
@@ -66,14 +71,22 @@ strong {
     border-bottom: 1px solid #d66c44;
 }
 
+button {
+    text-align: center;
+    border: none;
+    outline: none;
+    background-color: inherit;
+}
+
+
 /* 用來設定與 fixed header 的距離 */
 .wrap-top {
-    padding: 90px 0 0;
+    padding: 100px 0 0;
 }
 
 /* 設定左右 & 下方留白 */
 .wrap-side {
-    padding: 0 3rem 2.5rem;
+    padding: 0 32px 25px;
 }
 
 /* 滿版間隔背景底色區分 */
@@ -107,3 +120,30 @@ section:nth-of-type(odd) .wrap-fluid-bg {
 .table-striped-orange tr:hover {
     background-color: #d66c44;
 }
+
+/* 手機螢幕 */
+@media screen and (max-width: 767px) {}
+
+/* 平板螢幕 */
+@media screen and (min-width: 768px) {
+
+    /* 用來設定與 fixed header 的距離 */
+    .wrap-top {
+        padding: 120px 0 0;
+    }
+
+    /* 大螢幕內容的寬度比例 */
+    .wrap-large {
+        width: 85%;
+        margin: 0 auto;
+    }
+
+    .read-area {
+        width: 70%;
+        margin: 0 auto;
+        max-width: 900px;
+    }
+}
+
+/* 電腦螢幕 */
+@media screen and (min-width: 992px) {}

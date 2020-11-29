@@ -25,35 +25,36 @@
     <!-- 控制 label checkbox -->
     <input type="checkbox" name="" id="menu-control">
 
-    <!-- navigation  -->
+    <!-- navigation fixed -->
     <header class="header">
         <div class="header-content">
-            <a href="../index.html" class="home-icon">
-                <i class="fas fa-home "></i>
-            </a>
+            <div class="header-logo">
+                <a href="../index.html" class="home-icon">
+                    <i class="fas fa-home "></i>
+                </a>
 
-            <!-- 漢堡選單 -->
-            <label for="menu-control">
-                <div class="header-rwd-icon">
-                    <i class="fas fa-bars "></i>
-                    <i class="fas fa-times"></i>
-                </div>
-            </label>
+                <!-- 漢堡選單 -->
+                <label for="menu-control">
+                    <div class="header-rwd-icon">
+                        <i class="fas fa-bars"></i>
+                        <i class="fas fa-times"></i>
+                    </div>
+                </label>
+            </div>
 
-            <nav>
+            <nav class="header-nav">
                 <ul class="nav-menu">
-                    <li>
-                        <a href="section_1.html">組織介紹</a>
-                        <i class="fas fa-angle-down"></i>
+                    <li class="dropdown">
+                        <button class="accordion">組織介紹<i class="fas fa-chevron-circle-down"></i></button>
+
                         <ul class="nav-submenu">
                             <li><a href="section_1-1.html">ITF</a></li>
                             <li><a href="section_1-2.html">ATP</a></li>
                             <li><a href="section_1-3.html">WTA</a></li>
                         </ul>
                     </li>
-                    <li>
-                        <a href="">重點賽事</a>
-                        <i class="fas fa-angle-down"></i>
+                    <li class="dropdown">
+                        <button class="accordion">重點賽事<i class="fas fa-chevron-circle-down"></i></button>
                         <ul class="nav-submenu">
                             <li><a href="section_2-1.html">賽事積分列表</a></li>
                             <li><a href="section_2-2.html">大滿貫</a></li>
@@ -61,13 +62,11 @@
                             <li><a href="section_2-4.html">WTA 巡迴賽</a></li>
                         </ul>
                     </li>
-                    <li>
-                        <a href="">比賽規則</a>
-                        <i class="fas fa-angle-down"></i>
+                    <li class="dropdown">
+                        <button class="accordion">比賽規則<i class="fas fa-chevron-circle-down"></i></button>
                         <ul class="nav-submenu">
                             <li><a href="section_3-1.html">球場</a></li>
                             <li><a href="section_3-2.html">計分系統</a></li>
-                            <li><a href="">人員</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -75,15 +74,13 @@
         </div>
     </header>
 
-
-
     <!-- contents -->
     <div class="wrap-top">
         <section>
-            <div class="wrap-side">
+            <div class="wrap-side read-area">
                 <!-- title contents -->
                 <div class="title">
-                    <h1>組織介紹</h1>
+                    <h2>組織介紹</h2>
                     <p>職業網球事務與比賽主要由三大組織一起維護運作，三大組織為：ITF ( 國際網球總會 )、ATP ( 職業網球聯合會 )、WTA ( 國際女子網球協會 )。</p>
                 </div>
                 <!-- breadcrumbs list -->
@@ -96,35 +93,38 @@
                 </div>
 
                 <div class="article">
-                    <h2>ATP</h2>
+                    <h3>ATP</h3>
                     <p>
-                        職業網球聯合會（Association of Tennis
-                        Professionals，縮寫：ATP）於1972年9月成立，旨在保護男子職業網球選手的利益。自1990年開始，該協會組織了以協會名為賽事名的全球網球巡迴賽事。負責管理女子職業網球選手的對應機構是女子網球聯合會。
+                        <strong>職業網球聯合會（Association of Tennis
+                            Professionals，縮寫：ATP)</strong>
+                        於 1972 年 9 月成立，旨在保護男子職業網球選手的利益。自 1990 年開始，該協會組織了以協會名為賽事名的全球網球巡迴賽事。負責管理女子職業網球選手的對應機構是女子網球聯合會。
                     </p>
                     <p>
-                        ATP世界巡迴賽包括：ATP世界巡迴賽1000大師系列賽事、ATP世界巡迴賽500系列賽事和ATP世界巡迴賽250系列賽事三項系列賽事，而同時ATP巡迴賽還監督為新人選手舉辦的ATP挑戰賽和為資深選手舉辦的ATP冠軍賽。但是大滿貫賽事、奧運會網球賽事、戴維斯杯等賽事並不由職業網球聯合會管理及監督，但這些賽事亦可以獲得ATP排名積分。
+                        ATP 世界巡迴賽包括：ATP 世界巡迴賽 1000 大師系列賽事、ATP 世界巡迴賽500 系列賽事和ATP世界巡迴賽 250 系列賽事三項系列賽事，而同時 ATP
+                        巡迴賽還監督為新人選手舉辦的 ATP 挑戰賽和為資深選手舉辦的ATP冠軍賽。但是大滿貫賽事、奧運會網球賽事、戴維斯杯等賽事並不由職業網球聯合會管理及監督，但這些賽事亦可以獲得 ATP
+                        排名積分。
                     </p>
 
                     <div class="article-card-wrap">
                         <div class="article-card">
-                            <h3>主辦賽事：</h3>
-                            <p>ATP世界巡迴賽</p>
+                            <h4>主辦賽事</h4>
+                            <p>ATP 世界巡迴賽</p>
                             <ul>
-                                <li>ATP世界巡迴賽1000大師系列賽事</li>
-                                <li>ATP世界巡迴賽500系列賽事</li>
-                                <li>ATP世界巡迴賽250系列賽事</li>
+                                <li>ATP 世界巡迴賽 1000 大師系列賽事</li>
+                                <li>ATP 世界巡迴賽 500 系列賽事</li>
+                                <li>ATP 世界巡迴賽 250 系列賽事</li>
                             </ul>
-                            <p>ATP世界巡迴賽總決賽</p>
-                            <p>ATP挑戰賽</p>
+                            <p>ATP 世界巡迴賽總決賽</p>
+                            <p>ATP 挑戰賽</p>
                         </div>
 
                         <div class="article-card">
-                            <h3>認可賽事：</h3>
-                            <p>不由ATP管理及監督，但這些賽事亦可獲得ATP排名積分</p>
+                            <h4>認可賽事</h4>
+                            <p>不由 ATP 管理及監督，但這些賽事亦可獲得 ATP 排名積分</p>
                             <ul>
                                 <li>大滿貫賽事</li>
                                 <li>奧運會網球賽事</li>
-                                <li>戴維斯杯</li>
+                                <li>台維斯杯</li>
                             </ul>
                         </div>
                     </div>
@@ -132,6 +132,8 @@
             </div>
         </section>
     </div>
+
+    <script src="../assets/js/section-navigation.js"></script>
 </body>
 
 </html>
